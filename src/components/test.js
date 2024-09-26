@@ -1,5 +1,5 @@
 import React from "react";
 
 export const test = () => {
-  return <div>te st</div>;
+  return <div>te fst</div>;
 };
