@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import "./_mixins";
+
+/* *************** COLORS *************** */
+$light-platinum: #FAFAFA;
+$white-main: #F5F5F5;
+$cool-silver: #ECECEC;
+$misty-silver: #E5E5E5;
+$soft-gray: #DADADA;
+$white-pure: #ffffff;
+$warm-brown: #AA9D97;
+$sandy-beige: #CA9374;
+$dusty-rose: #CF9A97;
+$olive-green: #667C73;
+$gunmetal-gray: #8A8A8A;
+$charcoal-gray: #484848;
+$red-main: #FF4646;
+$orange-main: #FCA120;
+$black-main: #000000;
+
+
+
+/* *************** MAIN *************** */
+* {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 400 !important;
+    font-size: 16px;
+    margin: 0 !important;
+    padding: 0 !important;
+    color: $black-main;
+}
+
+body {
+    background-color: $white-pure;
+}
+
+.sale-jumbo {
+    font-size: 187px !important;
+    /* Najveći naslov */
+    line-height: 1.1 !important;
+    -webkit-text-stroke: 2px $black-main;
+    color: $white-main;
+
+    @media (max-width: 1400px) {
+        font-size: 9.5rem !important; // Prilagođeno za ekrane oko 1400px
+    }
+
+    @media (max-width: 1200px) {
+        font-size: 7.8rem !important; // Prilagođeno za veće ekrane
+    }
+
+    @media (max-width: 992px) {
+        font-size: 5.5rem !important; // Prilagođeno za srednje ekrane
+    }
+
+    @media (max-width: 768px) {
+        font-size: 3.7rem !important; // Prilagođeno za male ekrane
+    }
+
+    @media (max-width: 576px) {
+        font-size: 8rem !important; // Prilagođeno za veoma male ekrane
+    }
+}
+
+.jumbo {
+    font-size: 6.375rem !important; // 91px
+    /* Najveći naslov */
+    line-height: 1.1 !important;
+
+    @media (max-width: 1400px) {
+        font-size: 4.6rem !important; // Prilagođeno za ekrane oko 1400px
+    }
+
+    font-size: 91px !important;
+    /* Najveći naslov */
+    line-height: 1.1 !important;
+
+    @media (max-width: 1200px) {
+        font-size: 3.8rem !important; // Prilagođeno za veće ekrane
+    }
+
+    @media (max-width: 992px) {
+        font-size: 2.6rem !important; // Prilagođeno za srednje ekrane
+    }
+
+    @media (max-width: 768px) {
+        font-size: 1.8rem !important; // Prilagođeno za male ekrane
+    }
+
+    @media (max-width: 576px) {
+        font-size: 4rem !important; // Prilagođeno za veoma male ekrane
+    }
+}
+
+.jumbo-xl {
+    font-size: 62px !important;
+    /* Drugi najveći naslov */
+    line-height: 1.2 !important;
+}
+
+.h1 {
+    font-size: 46px !important;
+    /* H1 naslov */
+    line-height: 1.3 !important;
+}
+
+.h2 {
+    font-size: 42px !important;
+    /* H2 naslov */
+    line-height: 1.3 !important;
+}
+
+.h3 {
+    font-size: 37.75px !important;
+    /* H3 naslov */
+    line-height: 1.3 !important;
+}
+
+.h4 {
+    font-size: 32px !important;
+    /* H4 naslov */
+    line-height: 1.3 !important;
+}
+
+.h5 {
+    font-size: 30px !important;
+    /* H5 naslov */
+    line-height: 1.3 !important;
+}
+
+.h6 {
+    font-size: 28px !important;
+    /* H6 naslov */
+    line-height: 1.3 !important;
+
+    @media (max-width: 1400px) {
+        font-size: 1.5rem !important; // Prilagođeno za ekrane oko 1400px
+    }
+
+    @media (max-width: 1200px) {
+        font-size: 1.5rem !important; // Prilagođeno za veće ekrane
+    }
+
+    @media (max-width: 992px) {
+        font-size: 1.25rem !important; // Prilagođeno za srednje ekrane
+    }
+
+    @media (max-width: 768px) {
+        font-size: 1rem !important; // Prilagođeno za male ekrane
+    }
+
+    @media (max-width: 576px) {
+        font-size: 1.5rem !important; // Prilagođeno za veoma male ekrane
+    }
+}
+
+/* ********** PARAGRAPHS ********** */
+
+/* ********** 14px ********** */
+.p1 {
+    font-size: 18px !important;
+    /* P1 tekst */
+    line-height: 1.3 !important;
+}
+
+/* ********** 12px ********** */
+.p2 {
+    font-size: 15px !important;
+    /* P2 tekst */
+    line-height: 1.3 !important;
+}
+
+/* ********** 11px ********** */
+.p3 {
+    font-size: 14px !important;
+    /* P3 tekst */
+    line-height: 1.3 !important;
+}
+
+/* ********** 10px ********** */
+.p4 {
+    font-size: 12px !important;
+    /* P4 tekst */
+    line-height: 1.3 !important;
+}
+
+/* ********** 8px ********** */
+.p5 {
+    font-size: 10px !important;
+    /* P5 tekst */
+    line-height: 1.3 !important;
+}
+
+/* *************** FONT-WEIGHT *************** */
+.fw-300 {
+    font-weight: 300 !important;
+}
+
+.fw-500 {
+    font-weight: 500 !important;
+}
+
+
+.fw-700 {
+    font-weight: 700 !important;
+}
+
+
+
+/* *************** DIVS *************** */
+
+.full-s {
+    min-width: 100% !important;
+    min-height: 100vh !important;
+    position: relative;
+}
+
+.f-c-r {
+    @include flex-center(row);
+}
+
+.f-c-c {
+    @include flex-center(column);
+}
+
+/* *************** COLORS *************** */
+
+.c-gray {
+    color: $charcoal-gray !important;
+}
+
+.c-gunmetal-gray {
+    color: $gunmetal-gray !important;
+}
+
+.c-red {
+    color: $red-main !important;
+}
+
+/* *************** BACKGROUNDS *************** */
+
+.bg-cool-silver {
+    background-color: $cool-silver !important;
+}
+
+.bg-soft-gray {
+    background-color: $soft-gray !important;
+}
+
+.bg-light-platinum {
+    background-color: $light-platinum !important;
+}
+
+.bg-black-main {
+    background-color: $black-main !important;
+}
+
+.bred {
+    border: solid red;
+}
+
+.bb {
+    border: solid blue;
+}
+
+.button-b {
+    color: $white-pure;
+    background: $black-main;
+    border-radius: 10px;
+    padding: 15px !important;
+    margin: 10px 0 !important;
+    width: 100%;
+}
