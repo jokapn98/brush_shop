@@ -17,6 +17,7 @@ $dusty-rose: #CF9A97;
 $olive-green: #667C73;
 $gunmetal-gray: #8A8A8A;
 $charcoal-gray: #484848;
+$gray: #767676;
 $red-main: #FF4646;
 $orange-main: #FCA120;
 $black-main: #000000;
@@ -36,6 +37,12 @@ $black-main: #000000;
 
 body {
     background-color: $white-pure;
+}
+
+.volkhov-regular {
+    font-family: "Volkhov", serif !important;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .sale-jumbo {
@@ -106,6 +113,21 @@ body {
     font-size: 46px !important;
     /* H1 naslov */
     line-height: 1.3 !important;
+    font-family: "Volkhov", serif !important;
+    font-weight: 400;
+    font-style: normal;
+
+    @media (max-width: 1200px) {
+        font-size: 2.5rem !important; // Prilagođeno za male ekrane
+    }
+
+    @media (max-width: 768px) {
+        font-size: 2.5rem !important; // Prilagođeno za male ekrane
+    }
+
+    @media (max-width: 576px) {
+        font-size: 2rem !important; // Prilagođeno za veoma male ekrane
+    }
 }
 
 .h2 {
@@ -158,6 +180,19 @@ body {
     }
 }
 
+.h7 {
+    font-size: 24px !important;
+    line-height: 1.2;
+
+    @media (max-width: 768px) {
+        font-size: 1.2rem !important; // Prilagođeno za male ekrane
+    }
+
+    @media (max-width: 576px) {
+        font-size: 1rem !important; // Prilagođeno za veoma male ekrane
+    }
+}
+
 /* ********** PARAGRAPHS ********** */
 
 /* ********** 14px ********** */
@@ -165,6 +200,14 @@ body {
     font-size: 18px !important;
     /* P1 tekst */
     line-height: 1.3 !important;
+
+    @media (max-width: 768px) {
+        font-size: 1rem !important; // Prilagođeno za male ekrane
+    }
+
+    @media (max-width: 576px) {
+        font-size: 1rem !important; // Prilagođeno za veoma male ekrane
+    }
 }
 
 /* ********** 12px ********** */
@@ -172,6 +215,8 @@ body {
     font-size: 15px !important;
     /* P2 tekst */
     line-height: 1.3 !important;
+
+
 }
 
 /* ********** 11px ********** */
@@ -186,6 +231,14 @@ body {
     font-size: 12px !important;
     /* P4 tekst */
     line-height: 1.3 !important;
+
+    @media (max-width: 768px) {
+        font-size: 0.7rem !important; // Prilagođeno za male ekrane
+    }
+
+    @media (max-width: 576px) {
+        font-size: 0.7rem !important; // Prilagođeno za veoma male ekrane
+    }
 }
 
 /* ********** 8px ********** */
@@ -233,6 +286,10 @@ body {
     color: $charcoal-gray !important;
 }
 
+.c-classicgray {
+    color: $gray;
+}
+
 .c-gunmetal-gray {
     color: $gunmetal-gray !important;
 }
@@ -273,5 +330,42 @@ body {
     border-radius: 10px;
     padding: 15px !important;
     margin: 10px 0 !important;
-    width: 100%;
+}
+
+.button-w {
+    color: $gunmetal-gray;
+    background: $light-platinum;
+    border-radius: 10px;
+    padding: 15px !important;
+    margin: 10px 0 !important;
+    border: none;
+    font-size: 16px;
+
+
+
+
+    @media (max-width: 1200px) {
+        font-size: 0.8rem !important;
+
+    }
+
+    @media (max-width: 992px) {
+        font-size: 0.6rem !important; // Prilagođeno za veće ekrane}
+
+    }
+
+    @media (max-width: 768px) {
+        padding: 10px !important;
+    }
+
+    @media (max-width: 576px) {
+        padding: 8px !important;
+    }
+
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

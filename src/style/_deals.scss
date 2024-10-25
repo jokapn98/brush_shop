@@ -1,0 +1,21 @@
+.deals {
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    &-main {
+        display: flex;
+        height: 35vh;
+
+
+        &-content {
+            display: flex;
+            flex-direction: column;
+            padding-right: 5% !important;
+            justify-content: space-between;
+        }
+    }
+}
