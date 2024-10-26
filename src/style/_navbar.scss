@@ -1,4 +1,16 @@
 .navbar {
     height: 10vh;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff !important;
+
+
+    &-collapse-nav {
+        display: flex;
+        justify-content: space-around !important;
+        align-items: center !important;
+
+    }
 }

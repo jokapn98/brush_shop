@@ -19,6 +19,7 @@ export const HomePage = () => {
         <Recomendation />
         <Quality />
         <Instagram />
+
         <Newsletter />
       </Layout>
     </div>
