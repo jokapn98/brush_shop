@@ -4,7 +4,11 @@ const Recomendation = () => {
   return (
     <div className="rec col-12 bg-soft-gray row">
       <div className="col-lg-8 col-md-12 rec-picture bg-cool-silver ">
-        <img className="col-xl-5 col-lg-7 col-md-6 col-8" src={rec} alt="" />
+        <img
+          className="col-xxl-5 col-xl-6 col-lg-7 col-md-6 col-8"
+          src={rec}
+          alt=""
+        />
       </div>
 
       <div className="col-lg-4 col-md-12 rec-text ">

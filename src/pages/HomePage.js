@@ -2,9 +2,12 @@ import React from "react";
 import { Layout } from "../components/Layout";
 import Home from "../components/Home";
 import Logos from "../components/Logos";
-import Deals from "../components/deals/Deals";
+
 import Bestsellers from "../components/bestsellers/Bestsellers";
 import Recomendation from "../components/recomendation/Recomendation";
+import Instagram from "../components/instagram/Instagram";
+import Quality from "../components/Quality";
+import Newsletter from "../components/Newsletter";
 
 export const HomePage = () => {
   return (
@@ -14,6 +17,9 @@ export const HomePage = () => {
         <Logos />
         <Bestsellers />
         <Recomendation />
+        <Quality />
+        <Instagram />
+        <Newsletter />
       </Layout>
     </div>
   );

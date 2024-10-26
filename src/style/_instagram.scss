@@ -1,0 +1,54 @@
+.ig {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(to bottom, #FAFAFA, #FFFFFF) !important;
+    min-height: 35vh;
+
+    &-text {
+        display: flex;
+        flex-direction: column;
+
+        & p {
+            margin: 15px 0 !important;
+        }
+
+    }
+
+    &-photo {
+
+        display: flex;
+        align-items: center;
+
+        &-square {
+
+            width: auto;
+            height: 80%;
+
+            & img {
+                width: 100% !important;
+            }
+        }
+
+        &-rectangle {
+
+            width: auto;
+            height: 100%;
+
+            & img {
+                width: 100% !important;
+            }
+        }
+
+        &-none {
+            @media (max-width: 768px) {
+                display: none;
+            }
+
+        }
+
+    }
+}
