@@ -1,8 +1,8 @@
 .quality {
     display: flex;
     justify-content: center;
-
-    height: 18vh;
+    min-height: 18vh;
+    padding: 20px 0 !important;
 
 
     &-content {

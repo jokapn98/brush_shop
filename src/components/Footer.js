@@ -2,9 +2,9 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="col-12 footer ">
+    <div className="col-12 footer">
       <div className="container footer-content col-12 row">
-        <div className="   h4 c-gray volkhov-regular col-lg-2 col-12 footer-logo ">
+        <div className="   h6 c-gray volkhov-regular col-lg-2 col-11 footer-logo ">
           Brushes
         </div>
         <div className="col-lg-4 col-12"></div>

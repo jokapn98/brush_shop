@@ -3,7 +3,7 @@ import square from "../../assets/instagram/square.png";
 import rectangle from "../../assets/instagram/rectangle.png";
 const Instagram = () => {
   return (
-    <div className="ig col-12">
+    <div className="ig col-12 ">
       <div className="col-md-7 col-9 ig-text">
         <h1 className="h1 c-gray "> Follow Us On Instagram</h1>
         <p className="p2 c-gunmetal-gray ">

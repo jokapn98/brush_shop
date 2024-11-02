@@ -3,7 +3,7 @@ import rec from "../../assets/recomendation/rec.png";
 const Recomendation = () => {
   return (
     <div className="rec col-12 bg-soft-gray row">
-      <div className="col-lg-8 col-md-12 rec-picture bg-cool-silver ">
+      <div className="col-lg-8 col-md-12 rec-picture bg-cool-silver">
         <img
           className="col-xxl-5 col-xl-6 col-lg-7 col-md-6 col-8"
           src={rec}
@@ -26,7 +26,9 @@ const Recomendation = () => {
           Size: <span>M</span>
         </p>
         <p className="h6">1800.00 rsd</p>
-        <button className="button-b col-lg-10 col-md-3 col-5">Buy now</button>
+        <button className="button-b col-xl-6 col-lg-8 col-md-3 col-5">
+          Buy now
+        </button>
       </div>
     </div>
   );

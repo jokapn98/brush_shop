@@ -4,7 +4,7 @@ import onebrush from "../assets/newsletter/onebrush.png";
 
 const Newsletter = () => {
   return (
-    <div className="news ">
+    <div className="news">
       <div className="container news-main col-12 ">
         <div className="col-2 news-main-pictures ">
           <img className="col-lg-12 col-12 " src={onebrush} alt="" />
@@ -18,7 +18,7 @@ const Newsletter = () => {
             you!
           </p>
           <p className="c-gunmetal-gray p1"> michael@ymail.com</p>
-          <button className="button-b col-lg-3 col-md-5 col-8">
+          <button className="button-b col-lg-3 col-md-5 col-sm-6 col-7">
             Subscribe Now
           </button>
         </div>

@@ -2,12 +2,12 @@ import React from "react";
 
 const BestsellerNav = () => {
   return (
-    <div className="best-nav">
-      <button className="button-w col-2">Face Brushes</button>
-      <button className="button-w col-2">Eye Brushes</button>
-      <button className="button-w col-2">Brush Sets</button>
-      <button className="button-w col-2">Specialty Brushes</button>
-      <button className="button-w col-2">Discount Deals</button>
+    <div className="best-nav row">
+      <button className="button-w col-md-2 col-4">Face Brushes</button>
+      <button className="button-w col-md-2 col-3">Eye Brushes</button>
+      <button className="button-w col-md-2 col-3">Brush Sets</button>
+      <button className="button-w col-md-2 col-5">Specialty Brushes</button>
+      <button className="button-w col-md-2 col-5">Discount Deals</button>
     </div>
   );
 };

@@ -8,13 +8,13 @@ import support from "../assets/quality/support.png";
 
 const Quality = () => {
   return (
-    <div className="quality ">
+    <div className="quality">
       <div className="container quality-content row">
         <div className="col-lg-3 col-md-6 col-6 quality-item">
           <img src={quality} alt="" />
           <p className="p2 fw-600 c-gray">
             High Quality <br />
-            <span className="p3 c-gray">crafted from top materials </span>
+            <span className="p3 c-gray">Top materials </span>
           </p>
         </div>
         <div className="col-lg-3 col-md-6 col-6 quality-item">

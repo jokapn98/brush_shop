@@ -11,9 +11,11 @@ const BestsellerProducts = () => {
         <BestsellerProduct />
         <BestsellerProduct />
         <BestsellerProduct />
-      </div>
-      <div className="col-12 d-flex justify-content-center">
-        <button className="button-b col-lg-2 col-md-3 col-4">View more</button>
+        <div className="col-12 d-flex justify-content-center">
+          <button className="button-b col-lg-2 col-md-3 col-4">
+            View more
+          </button>
+        </div>
       </div>
     </div>
   );

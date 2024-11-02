@@ -6,8 +6,8 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 function NavbarMenu() {
   return (
     <div className="navbar">
-      <div className=" container   ">
-        <Navbar expand="lg" className="bg-body-tertiary">
+      <div className=" container ">
+        <Navbar expand="lg" className="bg-body-tertiary ">
           <Container>
             <Navbar.Brand className="h3 volkhov-regular col-3   " href="#home">
               BRUSHES
