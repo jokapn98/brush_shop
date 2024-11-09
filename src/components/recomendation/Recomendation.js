@@ -1,5 +1,6 @@
-import React from "react";
 import rec from "../../assets/recomendation/rec.png";
+import { Link } from "react-router-dom";
+
 const Recomendation = () => {
   return (
     <div className="rec col-12 bg-soft-gray row">
@@ -26,9 +27,12 @@ const Recomendation = () => {
           Size: <span>M</span>
         </p>
         <p className="h6">1800.00 rsd</p>
-        <button className="button-b col-xl-6 col-lg-8 col-md-3 col-5">
+        <Link
+          to="/shop"
+          className="button-b col-xl-6 col-lg-8 col-md-3 col-5 text-decoration-none d-flex justify-content-center align-items-center"
+        >
           Buy now
-        </button>
+        </Link>
       </div>
     </div>
   );

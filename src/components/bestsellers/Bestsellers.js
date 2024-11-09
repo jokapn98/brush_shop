@@ -2,7 +2,7 @@ import React from "react";
 import BestsellerNav from "./BestsellerNav";
 import BestsellerProducts from "./BestsellerProducts";
 
-const Bestsellers = () => {
+const Bestsellers = ({ brushes }) => {
   return (
     <div className="best center ">
       <div className="container">
@@ -17,7 +17,7 @@ const Bestsellers = () => {
         </div>
         <div className="col-12">
           <BestsellerNav />
-          <BestsellerProducts />
+          <BestsellerProducts brushes={brushes} />
         </div>
       </div>
     </div>

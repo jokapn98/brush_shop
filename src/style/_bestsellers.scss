@@ -4,6 +4,7 @@
     &-main {
         display: flex;
         justify-content: space-around;
+
     }
 
     &-sellers {
@@ -50,14 +51,19 @@
         border-radius: 10px;
         background-color: $white-pure;
 
+
+
+
+
+
         & img {
             width: 90%;
         }
 
-        &-stars {
+        &-desc {
             display: flex;
             justify-content: space-between;
-            margin: 0 0 20px 0 !important;
+            margin: 0px 0 20px 0 !important;
 
 
         }
@@ -65,10 +71,17 @@
         &-content {
             display: flex;
             flex-direction: column;
+            padding: 10px 0 !important;
+
+            @media (max-width: 576px) {
+                height: 300px !important;
+
+                justify-content: space-between;
+            }
 
             & img {
                 width: 100%;
-                margin: 0 0 20px 0 !important;
+
             }
 
         }
@@ -77,7 +90,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin: 20px 0 0 0 !important;
+            margin: 5px 0 0 0 !important;
         }
     }
 }
@@ -88,12 +101,16 @@
     display: flex;
     justify-content: flex-end;
 
-
+    height: auto !important;
+    align-items: flex-end;
+    margin: 5px 0 0 0 !important;
 }
 
 .star {
     height: 18px !important;
     width: 18px !important;
+
+
 
     @media (max-width: 768px) {
         height: 15px !important;
@@ -104,4 +121,6 @@
         height: 12px !important;
         width: 12px !important;
     }
+
+
 }

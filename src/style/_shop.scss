@@ -1,0 +1,54 @@
+.sh {
+    display: flex;
+    justify-content: center;
+    min-height: 70vh !important;
+
+}
+
+.shop {
+    display: flex;
+
+    @media (max-width: 992px) {
+        flex-direction: column;
+    }
+
+    &-filters {
+        display: flex;
+        flex-direction: column;
+
+
+
+    }
+
+    &-filter {
+        padding: 10px 0 !important;
+        display: flex;
+        flex-direction: column;
+
+        & p {
+            margin: 0 0 7px 0 !important;
+        }
+
+        & button {
+            background: transparent;
+            border: none;
+            text-align: left;
+            color: $gunmetal-gray !important;
+            margin: 5px 0 !important;
+        }
+
+    }
+
+    &-product {
+        display: flex;
+        flex-direction: column;
+        margin: 15px 0 !important;
+
+        & p {
+            margin: 5px 0 !important;
+        }
+
+    }
+
+
+}
