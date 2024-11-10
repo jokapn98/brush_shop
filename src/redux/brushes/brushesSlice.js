@@ -5,17 +5,18 @@ const initialState = [
     id: 1,
     name: "Pro Blending Brush",
     shortDescription: "Savršena četkica za blendanje",
-    description: "Ova četkica omogućava lako blendanje senke...", //ALWAYS SAME LENGTH
+    description: "Ova četkica omogućava lako blendanje senke...",
     quantity: 20,
     rating: 4.8,
     brushImg: [
       "https://cdn.pixabay.com/photo/2021/01/06/07/52/lipsticks-5893480_1280.jpg",
       "slika2.jpg"
-    ], // Lista URL-ova slika
+    ],
     tags: ["blendanje", "senke"],
     price: "1400",
     topSellers: true,
-    brend: "Maange"
+    brend: "Maange",
+    colors: ["#F5F5F5", "#FFC0CB"] // bela, roze
   },
   {
     id: 2,
@@ -31,7 +32,8 @@ const initialState = [
     tags: ["detalji", "nanošenje"],
     price: "1200",
     topSellers: true,
-    brend: "Maange"
+    brend: "Maange",
+    colors: ["#000000", "#8B4513"] // crna, braon
   },
   {
     id: 3,
@@ -44,7 +46,8 @@ const initialState = [
     tags: ["ravno", "nanošenje"],
     price: "1300",
     topSellers: false,
-    brend: "Maange"
+    brend: "Maange",
+    colors: ["#FFFFFF", "#808080"] // bela, siva
   },
   {
     id: 4,
@@ -57,7 +60,8 @@ const initialState = [
     tags: ["puder", "tečni"],
     price: "1500",
     topSellers: true,
-    brend: "Maange"
+    brend: "Maange",
+    colors: ["#D2B48C", "#FFD700"] // tan, zlatna
   },
   {
     id: 5,
@@ -69,20 +73,22 @@ const initialState = [
     brushImg: ["slika9.jpg", "slika10.jpg"],
     tags: ["korektor", "prikrivanje"],
     price: "1100",
-    topSellers: false
+    topSellers: false,
+    colors: ["#FF69B4", "#FFF5EE"] // roze, svetla boja kože
   },
   {
     id: 6,
     name: "Angled Brush",
     shortDescription: "Četkica sa uglom za konturiranje",
-    description: "Savršena za konturiranje lica i obrvica i obrvica i obrva...",
+    description: "Savršena za konturiranje lica i obrva...",
     quantity: 22,
     rating: 4.7,
     brushImg: ["slika11.jpg", "slika12.jpg"],
     tags: ["konturiranje", "obrve"],
     price: "1450",
     topSellers: true,
-    brend: "Maange"
+    brend: "Maange",
+    colors: ["#000000", "#A52A2A"] // crna, tamno braon
   },
   {
     id: 7,
@@ -95,7 +101,8 @@ const initialState = [
     tags: ["rumenilo"],
     price: "1250",
     topSellers: false,
-    brend: "Jaff"
+    brend: "Jaff",
+    colors: ["#FF6347", "#F5DEB3"] // koralno crvena, bež
   },
   {
     id: 8,
@@ -107,7 +114,8 @@ const initialState = [
     brushImg: ["slika15.jpg", "slika16.jpg"],
     tags: ["usne", "ruž"],
     price: "1150",
-    topSellers: false
+    topSellers: false,
+    colors: ["#FF4500", "#D3D3D3"] // narandžasta, svetlo siva
   },
   {
     id: 9,
@@ -120,7 +128,8 @@ const initialState = [
     tags: ["obrve", "oblikovanje"],
     price: "1350",
     topSellers: true,
-    brend: "Maange"
+    brend: "Maange",
+    colors: ["#8B4513", "#D2691E"] // braon, čokoladna
   },
   {
     id: 10,
@@ -133,7 +142,8 @@ const initialState = [
     tags: ["blendanje", "ten"],
     price: "900",
     topSellers: true,
-    brend: "jaff"
+    brend: "jaff",
+    colors: ["#FAEBD7", "#FFDEAD"] // svetlo bež, pastelno bež
   },
   {
     id: 11,
@@ -146,7 +156,8 @@ const initialState = [
     tags: ["fiksiranje", "puder"],
     price: "1300",
     topSellers: false,
-    brend: "Maange"
+    brend: "Maange",
+    colors: ["#E6E6FA", "#FFF8DC"] // lavanda, svetlo bež
   }
 ];
 

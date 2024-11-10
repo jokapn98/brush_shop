@@ -41,6 +41,7 @@ const ShopProducts = ({ brushes }) => {
             name={brush.name}
             brushImg={brush.brushImg}
             price={brush.price}
+            colors={brush.colors}
           />
         ))}
       </div>

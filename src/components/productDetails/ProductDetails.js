@@ -6,7 +6,7 @@ import { IoBagHandleOutline } from "react-icons/io5";
 
 import rectangle from "../../assets/instagram/rectangle.png";
 
-const ProductDetails = () => {
+const ProductDetails = ({ brushes }) => {
   return (
     <div className="col-12 container-main">
       <div className="container prod  col-12 row">
@@ -37,7 +37,17 @@ const ProductDetails = () => {
             This luxurious set includes 7 brushes made from natural hair and
             wood, offering precise blending and shading for flawless eye looks.
           </p>
-          <p className="volkhov-regular ">Colors:</p>
+          <p className="volkhov-regular">Colors:</p>
+          {brushes[0]?.colors.map((color) => (
+            <div className="d-flex row">
+              <button
+                className="color"
+                style={{ backgroundColor: color }}
+                key={color}
+              ></button>
+            </div>
+          ))}
+
           <div className="colors">
             <div className="color"></div>
             <div className="color"></div>
