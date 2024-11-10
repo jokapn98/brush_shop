@@ -8,7 +8,7 @@ function NavbarMenu() {
       <div className=" container ">
         <Navbar expand="lg" className="bg-body-tertiary ">
           <Container>
-            <Navbar.Brand className="h3 volkhov-regular col-3   " href="/">
+            <Navbar.Brand className="h4 volkhov-regular col-3" href="/">
               BRUSHES
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -18,7 +18,7 @@ function NavbarMenu() {
                 <Nav.Link className="button-w" href="/">
                   Home
                 </Nav.Link>
-                <Nav.Link className="button-w" href="/">
+                <Nav.Link className="button-w" href="/ProductDetails">
                   Details
                 </Nav.Link>
                 <Nav.Link className="button-w" href="/">

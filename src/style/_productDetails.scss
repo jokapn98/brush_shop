@@ -1,0 +1,94 @@
+.prod {
+    display: flex;
+
+    &-imageContainer {
+        display: flex;
+    }
+
+    &-small {
+        @media (max-width:765px) {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 4px !important;
+        }
+
+
+        & img {
+            margin: 4px 0 !important;
+
+            @media (max-width:765px) {
+                margin: 0 4px !important;
+            }
+        }
+
+    }
+
+    &-main-image {
+        @media (max-width:765px) {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    &-content {
+        display: flex;
+        flex-direction: column;
+
+
+
+        &-hurryUp {
+            border: 1px solid #FF706B;
+            padding: 10px !important;
+            background: #FDEFEE;
+            color: #FF706B;
+            margin: 50px 0 30px 0 !important;
+            border-radius: 4px;
+        }
+
+        &-description {
+            margin-bottom: 25px !important;
+        }
+
+        &-quantity {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0 !important;
+
+            &-counter {
+                display: flex;
+                border: 1px solid silver;
+                justify-content: center;
+                align-items: center;
+
+                :nth-child(-n +3) {
+                    display: flex;
+                    justify-content: center;
+                }
+            }
+        }
+
+        &-faq {
+            display: flex;
+            margin: 50px 0 !important;
+            padding-bottom: 20px !important;
+            border-bottom: 1px solid $misty-silver;
+
+            &-icon {
+                display: flex;
+                align-items: center;
+
+                &-image {
+                    margin-right: 5px !important;
+                }
+            }
+        }
+
+        &-addtocart {
+            border: 1px solid black;
+            background: #ffffff;
+            border-radius: 4px;
+            padding: 8px !important;
+        }
+
+    }
+}
