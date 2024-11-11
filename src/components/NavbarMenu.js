@@ -18,17 +18,14 @@ function NavbarMenu() {
                 <Nav.Link className="button-w" href="/">
                   Home
                 </Nav.Link>
-                <Nav.Link className="button-w" href="/ProductDetails">
-                  Details
+                <Nav.Link className="button-w" href="/Shop">
+                  Shop
                 </Nav.Link>
                 <Nav.Link className="button-w" href="/">
                   New Arrivals
                 </Nav.Link>
                 <Nav.Link className="button-w" href="/contact">
                   Contact
-                </Nav.Link>
-                <Nav.Link className="button-w" href="/Shop">
-                  Shop
                 </Nav.Link>
               </Nav>
             </Navbar.Collapse>

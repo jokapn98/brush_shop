@@ -7,8 +7,8 @@ const Shop = ({ brushes }) => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <div className="sh bb">
-      <div className="container bb">
+    <div className="sh">
+      <div className="container">
         <div className="shop col-12">
           <Filter />
           <ShopProducts brushes={brushes} />

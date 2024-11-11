@@ -12,6 +12,7 @@
         flex-direction: column;
     }
 
+
     &-filters {
         display: flex;
         flex-direction: column;
@@ -42,12 +43,21 @@
     &-product {
         display: flex;
         flex-direction: column;
+        justify-content: center;
         margin: 15px 0 !important;
+
 
         & p {
             margin: 5px 0 !important;
         }
 
+
+        &-main {
+
+            padding: 0 30px !important;
+
+
+        }
     }
 
 

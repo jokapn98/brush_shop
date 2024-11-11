@@ -35,9 +35,11 @@ const ShopProducts = ({ brushes }) => {
         </Dropdown.Menu>
       </Dropdown>
 
-      <div className="shop-products col-12 bb row">
+      <div className="shop-products col-12 row">
         {brushes.map((brush) => (
           <ShopProduct
+            key={brush.id}
+            id={brush.id}
             name={brush.name}
             brushImg={brush.brushImg}
             price={brush.price}

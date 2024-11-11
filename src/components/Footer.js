@@ -9,7 +9,7 @@ const Footer = () => {
         </div>
         <div className="col-lg-4 col-12"></div>
         <div className="col-lg-6 col-12 footer-menu ">
-          <p className="c-gray footer-menu-item col-">Support</p>
+          <p className="c-gray footer-menu-item foo">Support</p>
           <p className="c-gray footer-menu-item">Invoicing</p>
           <p className="c-gray footer-menu-item">Contract</p>
           <p className="c-gray footer-menu-item">Careers</p>

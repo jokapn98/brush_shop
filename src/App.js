@@ -12,6 +12,7 @@ function App() {
         <Route exact path="/Shop" element={<ShopPage />} />
         <Route exact path="/ProductDetails" element={<ProductDetailsPage />} />
         <Route exact path="/Contact" element={<ContactPage />} />
+        <Route path="/product/:id" element={<ProductDetailsPage />} />
       </Routes>
     </BrowserRouter>
   );

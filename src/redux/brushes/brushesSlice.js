@@ -12,7 +12,8 @@ const initialState = [
       "https://cdn.pixabay.com/photo/2021/01/06/07/52/lipsticks-5893480_1280.jpg",
       "slika2.jpg"
     ],
-    tags: ["blendanje", "senke"],
+    tags: ["Real hair", "Eyes", "Blush"],
+    collections: ["Face sets", "Eye sets"], // Dodatak za Collections
     price: "1400",
     topSellers: true,
     brend: "Maange",
@@ -29,7 +30,8 @@ const initialState = [
       "https://cdn.pixabay.com/photo/2021/01/06/07/52/lipsticks-5893480_1280.jpg",
       "slika4.jpg"
     ],
-    tags: ["detalji", "nanošenje"],
+    tags: ["Eyes", "Lips", "Foundation"],
+    collections: ["Face sets"], // Dodatak za Collections
     price: "1200",
     topSellers: true,
     brend: "Maange",
@@ -43,7 +45,8 @@ const initialState = [
     quantity: 25,
     rating: 4.6,
     brushImg: ["slika5.jpg", "slika6.jpg"],
-    tags: ["ravno", "nanošenje"],
+    tags: ["Eyeshadow", "Blush"],
+    collections: ["Eye sets", "Equipments"], // Dodatak za Collections
     price: "1300",
     topSellers: false,
     brend: "Maange",
@@ -57,7 +60,8 @@ const initialState = [
     quantity: 30,
     rating: 4.9,
     brushImg: ["slika7.jpg", "slika8.jpg"],
-    tags: ["puder", "tečni"],
+    tags: ["Foundation", "Blender"],
+    collections: ["Face sets", "Poppins"], // Dodatak za Collections
     price: "1500",
     topSellers: true,
     brend: "Maange",
@@ -71,9 +75,11 @@ const initialState = [
     quantity: 18,
     rating: 4.5,
     brushImg: ["slika9.jpg", "slika10.jpg"],
-    tags: ["korektor", "prikrivanje"],
+    tags: ["Blush", "Lips", "Highlighter"],
+    collections: ["Poppins"], // Dodatak za Collections
     price: "1100",
     topSellers: false,
+    brend: "Maange",
     colors: ["#FF69B4", "#FFF5EE"] // roze, svetla boja kože
   },
   {
@@ -84,7 +90,8 @@ const initialState = [
     quantity: 22,
     rating: 4.7,
     brushImg: ["slika11.jpg", "slika12.jpg"],
-    tags: ["konturiranje", "obrve"],
+    tags: ["Contouring", "Eyebrow", "Highlighter"],
+    collections: ["Face sets", "Eye sets"], // Dodatak za Collections
     price: "1450",
     topSellers: true,
     brend: "Maange",
@@ -98,7 +105,8 @@ const initialState = [
     quantity: 19,
     rating: 4.6,
     brushImg: ["slika13.jpg", "slika14.jpg"],
-    tags: ["rumenilo"],
+    tags: ["Blush", "Highlighter"],
+    collections: ["Face sets"], // Dodatak za Collections
     price: "1250",
     topSellers: false,
     brend: "Jaff",
@@ -112,9 +120,11 @@ const initialState = [
     quantity: 20,
     rating: 4.4,
     brushImg: ["slika15.jpg", "slika16.jpg"],
-    tags: ["usne", "ruž"],
+    tags: ["Lips", "Blush"],
+    collections: ["Poppins", "Equipments"], // Dodatak za Collections
     price: "1150",
     topSellers: false,
+    brend: "Maange",
     colors: ["#FF4500", "#D3D3D3"] // narandžasta, svetlo siva
   },
   {
@@ -125,7 +135,8 @@ const initialState = [
     quantity: 23,
     rating: 4.5,
     brushImg: ["slika17.jpg", "slika18.jpg"],
-    tags: ["obrve", "oblikovanje"],
+    tags: ["Eyebrow", "Blush"],
+    collections: ["Eye sets", "Poppins"], // Dodatak za Collections
     price: "1350",
     topSellers: true,
     brend: "Maange",
@@ -139,25 +150,12 @@ const initialState = [
     quantity: 40,
     rating: 4.8,
     brushImg: ["slika19.jpg", "slika20.jpg"],
-    tags: ["blendanje", "ten"],
+    tags: ["Blender", "Foundation", "Highlighter"],
+    collections: ["Poppins", "Face sets"], // Dodatak za Collections
     price: "900",
     topSellers: true,
-    brend: "jaff",
+    brend: "Jaff",
     colors: ["#FAEBD7", "#FFDEAD"] // svetlo bež, pastelno bež
-  },
-  {
-    id: 11,
-    name: "Setting Brush",
-    shortDescription: "Četkica za fiksiranje",
-    description: "Savršena za nanošenje pudera u prahu...",
-    quantity: 17,
-    rating: 4.7,
-    brushImg: ["slika21.jpg", "slika22.jpg"],
-    tags: ["fiksiranje", "puder"],
-    price: "1300",
-    topSellers: false,
-    brend: "Maange",
-    colors: ["#E6E6FA", "#FFF8DC"] // lavanda, svetlo bež
   }
 ];
 

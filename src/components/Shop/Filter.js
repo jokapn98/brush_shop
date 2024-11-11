@@ -28,21 +28,21 @@ const Filter = () => {
     }
   ];
   return (
-    <div className="col-lg-3 col-md-12 shop-filters">
+    <div className="col-lg-3 col-md-12 shop-filters col-12 row bb">
       {filters.map((filter) => (
-        <div key={filter.category} className="shop-filter">
+        <div key={filter.category} className="shop-filter col-12 row bb">
           <p className="p1 volkhov-regular">{filter.category}</p>
           <div
-            className={
+            className={`${
               filter.category === "Tags"
                 ? "d-flex flex-wrap"
                 : "d-flex flex-column"
-            }
+            } col-12 bb`}
           >
             {filter.items.map((item) => (
               <button
                 key={item}
-                className={`p2 ${filter.category === "Tags" ? "col-4" : ""}`}
+                className={`p2 ${filter.category === "Tags" ? "col-6" : ""}`}
               >
                 {item}
               </button>
