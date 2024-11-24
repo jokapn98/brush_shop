@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useLayoutEffect } from "react";
 import { FaRegCircleQuestion } from "react-icons/fa6";
 import { HiOutlineShare } from "react-icons/hi";
 import { CiDeliveryTruck } from "react-icons/ci";
@@ -19,7 +19,9 @@ const ProductDetails = () => {
       setItem(selectedBrush); // Set the selected brush in the state
     }
   }, [id, brushes]);
-
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   // If the item is not found, show a message
   if (!item) {
     return <p>Proizvod nije pronađen.</p>;

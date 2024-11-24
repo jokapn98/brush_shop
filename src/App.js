@@ -4,15 +4,22 @@ import { HomePage } from "./pages/HomePage";
 import ShopPage from "./pages/ShopPage";
 import ProductDetailsPage from "./pages/ProductDetailsPage";
 import ContactPage from "./pages/ContactPage";
+import ProductManipulationPage from "./pages/ProductManipulationPage";
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route exact path="/" element={<HomePage />} />
-        <Route exact path="/Shop" element={<ShopPage />} />
+        <Route path="/shop/page/:pageNum" element={<ShopPage />} />
+
         <Route exact path="/ProductDetails" element={<ProductDetailsPage />} />
         <Route exact path="/Contact" element={<ContactPage />} />
         <Route path="/product/:id" element={<ProductDetailsPage />} />
+        <Route
+          exact
+          path="/manipulation"
+          element={<ProductManipulationPage />}
+        />
       </Routes>
     </BrowserRouter>
   );

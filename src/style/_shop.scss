@@ -60,5 +60,80 @@
         }
     }
 
+    &-pageNum {
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
+        & button {
+            border: none;
+            background: transparent;
+        }
+    }
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.checkbox-input {
+    margin-right: 8px;
+}
+
+.checkbox-label {
+    cursor: pointer;
+}
+
+.shop-filters-container {
+    padding: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.shop-filter {
+    margin-bottom: 16px;
+}
+
+.filter-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    color: #333;
+}
+
+.filter-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.default-layout {
+    flex-direction: column;
+}
+
+.tags-layout {
+    flex-wrap: wrap;
+}
+
+.filter-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.filter-checkbox {
+    width: 16px;
+    height: 16px;
+}
+
+.filter-label {
+    font-size: 14px;
+    color: #555;
+}
+
+.filter-item:hover .filter-label {
+    color: #000;
 }

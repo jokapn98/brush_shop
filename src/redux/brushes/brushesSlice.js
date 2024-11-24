@@ -163,7 +163,7 @@ const brushesSlice = createSlice({
   name: "brushes",
   initialState,
   reducers: {
-    dodajCetkicu: (state, action) => {
+    addBrush: (state, action) => {
       state.push(action.payload);
     },
     azurirajCetkicu: (state, action) => {
@@ -180,6 +180,6 @@ const brushesSlice = createSlice({
   }
 });
 
-export const { dodajCetkicu, azurirajCetkicu, ukloniCetkicu } =
+export const { addBrush, azurirajCetkicu, ukloniCetkicu } =
   brushesSlice.actions;
 export default brushesSlice.reducer;

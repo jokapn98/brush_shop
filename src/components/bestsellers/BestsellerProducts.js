@@ -5,12 +5,13 @@ const BestsellerProducts = ({ brushes }) => {
   return (
     <div className="best-products col-12 row">
       {brushes
-        .filter((brush) => brush.topSellers === true) // Prikazuje samo proizvode gde je bestseller=true
+        .filter((brush) => brush.topSellers === true)
         .slice(0, 6) // Ograničava broj na maksimalno 6 proizvoda
         .map((brush) => (
           <div className="col-lg-4 col-md-6 col-6" key={brush.id}>
             <BestsellerProduct
               name={brush.name}
+              id={brush.id}
               shortDescription={brush.shortDescription}
               description={brush.description}
               quantity={brush.quantity}

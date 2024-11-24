@@ -1,5 +1,6 @@
 import React from "react";
-import homer from "../../assets/home/homer.png";
+import home from "../../assets/home/homer.png";
+import contat from "../../assets/contact/contact.png";
 const Contact = () => {
   return (
     <div className=" ">
@@ -27,7 +28,7 @@ const Contact = () => {
               </div>
             </div>
             <div className="col-lg-6 col-sm-12 contact-image ">
-              <img className="col-5" src={homer} alt="" />
+              <img className="col-10" src={contat} alt="" />
             </div>
           </div>
         </div>

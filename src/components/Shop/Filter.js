@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Filter = () => {
   const filters = [
@@ -27,25 +27,32 @@ const Filter = () => {
       ]
     }
   ];
+  const [toggle, setToggle] = useState(true);
+
   return (
-    <div className="col-lg-3 col-md-12 shop-filters col-12 row bb">
+    <div className="col-lg-3 col-md-12 shop-filters">
       {filters.map((filter) => (
-        <div key={filter.category} className="shop-filter col-12 row bb">
-          <p className="p1 volkhov-regular">{filter.category}</p>
-          <div
-            className={`${
-              filter.category === "Tags"
-                ? "d-flex flex-wrap"
-                : "d-flex flex-column"
-            } col-12 bb`}
-          >
+        <div key={filter.category} className="shop-filter mb-4">
+          <button onClick={() => setToggle(!toggle)} className="filter-title">
+            {filter.category} &gt;
+          </button>
+          <div className="row g-2">
             {filter.items.map((item) => (
-              <button
+              <div
                 key={item}
-                className={`p2 ${filter.category === "Tags" ? "col-6" : ""}`}
+                className="col-lg-6 col-md-4 col-4 filter-item d-flex align-items-center"
               >
-                {item}
-              </button>
+                <input
+                  type="checkbox"
+                  id={item}
+                  name={item}
+                  value={item}
+                  className="filter-checkbox me-2"
+                />
+                <label htmlFor={item} className="filter-label">
+                  {item}
+                </label>
+              </div>
             ))}
           </div>
         </div>
