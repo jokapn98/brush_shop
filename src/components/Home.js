@@ -15,7 +15,7 @@ const Home = () => {
                 <div className="sale-jumbo fw-500">SALE</div>
                 <div className="h6">NEW COLLECTION</div>
                 <Link
-                  to="/shop"
+                  to="/shop/page/:pageNum"
                   className="col-lg-8 col-md-12 col-sm-8 col-6 button-b d-flex justify-content-center text-decoration-none"
                 >
                   SHOP NOW

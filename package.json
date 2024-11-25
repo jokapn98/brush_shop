@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build": "react-scripts build && npm run copy-redirects",
+    "copy-redirects": "copyfiles ./_redirects ./build"
   },
   "eslintConfig": {
     "extends": [
@@ -36,5 +37,8 @@
     "react-router-dom": "^6.26.2",
     "uuid": "^11.0.3",
     "web-vitals": "^4.2.3"
+  },
+  "devDependencies": {
+    "copyfiles": "^2.4.1"
   }
 }

@@ -26,7 +26,7 @@ const BestsellerProducts = ({ brushes }) => {
 
       <div className="col-12 d-flex justify-content-center">
         <Link
-          to="/shop"
+          to="/shop/page/:pageNum"
           className="col-lg-2 col-md-3 col-4 button-b col-12 d-flex justify-content-center text-decoration-none"
         >
           View more

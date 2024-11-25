@@ -28,7 +28,7 @@ const Recomendation = () => {
         </p>
         <p className="h6">1800.00 rsd</p>
         <Link
-          to="/shop"
+          to="/shop/page/:pageNum"
           className="button-b col-xl-6 col-lg-8 col-md-3 col-5 text-decoration-none d-flex justify-content-center align-items-center"
         >
           Buy now

@@ -18,7 +18,7 @@ function NavbarMenu() {
                 <Nav.Link className="button-w" href="/">
                   Home
                 </Nav.Link>
-                <Nav.Link className="button-w" href="/Shop">
+                <Nav.Link className="button-w" href="/shop/page/:pageNum">
                   Shop
                 </Nav.Link>
                 <Nav.Link className="button-w" href="/">
