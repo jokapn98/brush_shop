@@ -1,0 +1,48 @@
+.sh {
+  display: flex;
+  justify-content: center;
+  min-height: 70vh !important;
+}
+
+.shop {
+  display: flex;
+}
+@media (max-width: 992px) {
+  .shop {
+    flex-direction: column;
+  }
+}
+.shop-filters {
+  display: flex;
+  flex-direction: column;
+}
+.shop-product {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 15px 0 !important;
+}
+.shop-product p {
+  margin: 5px 0 !important;
+}
+.shop-product-main {
+  padding: 0 30px !important;
+}
+.shop-pageNum {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.shop-pageNum button {
+  border: none;
+  background: transparent;
+}
+
+.filter-heading {
+  margin: 30px 0 15px 0 !important;
+}
+.filter-price {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}

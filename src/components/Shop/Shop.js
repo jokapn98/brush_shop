@@ -10,7 +10,7 @@ const Shop = ({ brushes }) => {
     <div className="sh">
       <div className="container">
         <div className="shop col-12">
-          <Filter />
+          <Filter brushes={brushes} />
           <ShopProducts brushes={brushes} />
         </div>
       </div>

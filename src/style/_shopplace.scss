@@ -1,0 +1,27 @@
+.sp {
+    border: solid red;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    &-filter {
+        width: 30%;
+
+    }
+
+    &-products {
+        width: 70%;
+        border: solid blue;
+
+        &-pageCounter {
+            display: flex;
+            max-width: 20%;
+            justify-content: center;
+            align-items: center;
+            border: none;
+            border: solid red;
+
+
+        }
+    }
+}

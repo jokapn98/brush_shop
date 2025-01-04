@@ -1,0 +1,33 @@
+.quality {
+  display: flex;
+  justify-content: center;
+  min-height: 18vh;
+  padding: 20px 0 !important;
+}
+.quality-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.quality-item {
+  display: flex;
+  align-items: center;
+  padding: 10px !important;
+}
+.quality-item img {
+  margin-right: 7px !important;
+  max-width: 50px;
+  max-height: 50px;
+}
+@media (max-width: 992px) {
+  .quality-item img {
+    max-width: 40px;
+    max-height: 40px;
+  }
+}
+@media (max-width: 768px) {
+  .quality-item img {
+    max-width: 30px !important;
+    max-height: 30px;
+  }
+}

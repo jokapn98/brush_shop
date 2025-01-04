@@ -1,0 +1,27 @@
+.manipulation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: solid red;
+}
+.manipulation label {
+  display: flex;
+  flex-direction: column;
+}
+.manipulation label input {
+  margin: 0 0 10px 0 !important;
+  padding: 4px !important;
+}
+.manipulation label textarea {
+  margin: 10px 0 !important;
+  padding: 4px 4px 20px 4px !important;
+}
+@media (max-width: 576px) {
+  .manipulation label {
+    padding: 0 10px !important;
+  }
+}
+.manipulation-main {
+  display: flex;
+}

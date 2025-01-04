@@ -1,0 +1,11 @@
+input:focus {
+  outline: none !important;
+}
+
+button:focus {
+  outline: none !important;
+}
+
+a:hover {
+  text-decoration: none !important;
+}

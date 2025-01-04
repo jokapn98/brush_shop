@@ -1,0 +1,36 @@
+.contact {
+  display: flex;
+}
+.contact-underlined {
+  border-bottom: 1px solid silver;
+  padding-bottom: 30px !important;
+  margin-bottom: 15px !important;
+}
+.contact-underlined h2 {
+  border: solid red;
+}
+.contact-form {
+  padding-top: 50px !important;
+}
+.contact-form input {
+  margin: 10px 0 !important;
+  padding: 10px !important;
+}
+.contact-form textarea {
+  margin: 10px 0 !important;
+  padding: 10px 10px 40px 10px !important;
+}
+@media (max-width: 576px) {
+  .contact-form {
+    padding: 0 10px !important;
+  }
+}
+.contact-submit {
+  display: flex;
+  justify-content: center;
+}
+.contact-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -6,15 +6,15 @@ import ShopProduct from "./ShopProduct";
 const ShopProducts = ({ brushes }) => {
   const { pageNum } = useParams(); // ucitava koja je trenutna stranica
   const navigate = useNavigate(); // ka novoj stranici
-  const [page, setPage] = useState(Number(pageNum) || 1); // pocetna str
+  const [page, setPage] = useState(Number(pageNum) || 1); // pocetna. str
   const [startNum, setStartNum] = useState((page - 1) * 9);
   const [endNum, setEndNum] = useState(page * 9);
 
   // Ažuriraj URL kada se stranica promeni
   useEffect(() => {
     navigate(`/shop/page/${page}`);
-    setStartNum((page - 1) * 9);
-    setEndNum(page * 9);
+    setStartNum((page - 1) * 12);
+    setEndNum(page * 12);
   }, [page, navigate]);
 
   const goToNextPage = () => {
@@ -25,10 +25,6 @@ const ShopProducts = ({ brushes }) => {
     if (page > 1) {
       setPage(page - 1);
     }
-  };
-
-  const brandFilter = (brand, niz) => {
-    return niz.filter((item) => item.brand === brand);
   };
 
   return (

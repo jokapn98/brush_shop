@@ -16,29 +16,8 @@
     &-filters {
         display: flex;
         flex-direction: column;
-
-
-
     }
 
-    &-filter {
-        padding: 10px 0 !important;
-        display: flex;
-        flex-direction: column;
-
-        & p {
-            margin: 0 0 7px 0 !important;
-        }
-
-        & button {
-            background: transparent;
-            border: none;
-            text-align: left;
-            color: $gunmetal-gray !important;
-            margin: 5px 0 !important;
-        }
-
-    }
 
     &-product {
         display: flex;
@@ -53,9 +32,7 @@
 
 
         &-main {
-
             padding: 0 30px !important;
-
 
         }
     }
@@ -72,68 +49,16 @@
     }
 }
 
-.checkbox-container {
-    display: flex;
-    align-items: center;
-    margin-bottom: 8px;
-}
+.filter {
 
-.checkbox-input {
-    margin-right: 8px;
-}
+    &-heading {
+        margin: 30px 0 15px 0 !important;
+    }
 
-.checkbox-label {
-    cursor: pointer;
-}
+    &-price {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
 
-.shop-filters-container {
-    padding: 16px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-}
-
-.shop-filter {
-    margin-bottom: 16px;
-}
-
-.filter-title {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 12px;
-    color: #333;
-}
-
-.filter-items {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-}
-
-.default-layout {
-    flex-direction: column;
-}
-
-.tags-layout {
-    flex-wrap: wrap;
-}
-
-.filter-item {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.filter-checkbox {
-    width: 16px;
-    height: 16px;
-}
-
-.filter-label {
-    font-size: 14px;
-    color: #555;
-}
-
-.filter-item:hover .filter-label {
-    color: #000;
+    }
 }
