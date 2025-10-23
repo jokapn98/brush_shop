@@ -1,10 +1,12 @@
 // Redux store (store.js)
 import { configureStore } from "@reduxjs/toolkit";
-import brushesReducer from "./brushes/brushesSlice"; // Uveri se da si ovde definisao brushesReducer
+import brushesReducer from "./brushes/brushesSlice";
+import filterReducer from "./filter/filterSlice";
 
 const store = configureStore({
   reducer: {
-    brushes: brushesReducer
+    brushes: brushesReducer,
+    filters: filterReducer
   }
 });
 

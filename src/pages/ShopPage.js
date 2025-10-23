@@ -13,9 +13,10 @@ const ShopPage = () => {
     <div>
       <Layout>
         <Shopplace />
-      </Layout>
-      <Layout>
-        <Shop brushes={brushes} />
+        {/* Ovo je shop gde ne izgledda sve ok, ali se trudim da sve radi. ovo mora da se sredi  */}
+
+        {/* <Shop brushes={brushes} />{" "}
+       Ovo je shop gde izgledda sve ok, ovo mora da se sredi  */}
         <Recomendation />
         <Quality />
         <Instagram />

@@ -7,7 +7,7 @@ const Shop = ({ brushes }) => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <div className="sh">
+    <div className="sh bg-primary ">
       <div className="container">
         <div className="shop col-12">
           <Filter brushes={brushes} />

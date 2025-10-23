@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import image952 from "../../assets/bestsellers/image952.png";
+
 import star from "../../assets/bestsellers/star.png";
 import { Link } from "react-router-dom";
 
@@ -15,17 +15,81 @@ const BestsellerProduct = ({
   price,
   id
 }) => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const nextImage = (e) => {
+    e.preventDefault();
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex === brushImg.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+  const prevImage = (e) => {
+    e.preventDefault();
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex === 0 ? brushImg.length - 1 : prevIndex - 1
+    );
+  };
+
   return (
     <div className="best-main col-12">
       <div className="best-product col-11">
         <Link to={`/product/${id}`}>
-          <div className="best-product-content ">
-            <img src={image952} alt="" />
+          <div className="best-product-content">
+            {/* --- SLIKE --- */}
+            <div
+              className="best-product-image-wrapper"
+              style={{ position: "relative" }} //
+            >
+              <img
+                src={brushImg[currentImageIndex]}
+                alt={`${name} ${currentImageIndex}`}
+                className="brush-image"
+              />
+
+              <button
+                className="prev-btn"
+                onClick={prevImage}
+                style={{
+                  position: "absolute",
+                  left: "10px",
+                  top: "50%",
+                  transform: "translateY(-50%)",
+                  background: "rgba(0,0,0,0.3)",
+                  color: "#fff",
+                  border: "none",
+                  borderRadius: "50%",
+                  width: "30px",
+                  height: "30px",
+                  cursor: "pointer"
+                }}
+              >
+                ‹
+              </button>
+
+              <button
+                className="next-btn"
+                onClick={nextImage}
+                style={{
+                  position: "absolute",
+                  right: "10px",
+                  top: "50%",
+                  transform: "translateY(-50%)",
+                  background: "rgba(0,0,0,0.3)",
+                  color: "#fff",
+                  border: "none",
+                  borderRadius: "50%",
+                  width: "30px",
+                  height: "30px",
+                  cursor: "pointer"
+                }}
+              >
+                ›
+              </button>
+            </div>
             <div className="p4 col-12 starimage ">
               <img className="star" src={star} alt="" />
-              <img className="star" src={star} alt="" />{" "}
-              <img className="star" src={star} alt="" />{" "}
-              <img className="star" src={star} alt="" />{" "}
+              <img className="star" src={star} alt="" />
+              <img className="star" src={star} alt="" />
+              <img className="star" src={star} alt="" />
               <img className="star" src={star} alt="" />
             </div>
             <div className="best-product-desc  col-12">

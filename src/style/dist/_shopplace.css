@@ -1,0 +1,18 @@
+.sp {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.sp-filter {
+  width: 30%;
+}
+.sp-products {
+  width: 70%;
+}
+.sp-products-pageCounter {
+  display: flex;
+  max-width: 20%;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}

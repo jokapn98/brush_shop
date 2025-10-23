@@ -1,7 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import ShopProduct from "../Shop/ShopProduct";
+import {
+  setFilterBrand,
+  setFilterCollection,
+  setFilterTag
+} from "../../redux/filter/filterSlice";
 
 const Shopplace = () => {
   const { pageNum } = useParams();
@@ -10,13 +15,29 @@ const Shopplace = () => {
   const [startNum, setStartNum] = useState((page - 1) * 12);
   const [endNum, setEndNum] = useState(page * 12);
   const brushes = useSelector((state) => state.brushes);
-  const [filterBrand, setFilterBrand] = useState([]);
+
+  // Prvo, koristi useSelector da dohvatiš filtere iz Redux stanja
+  const filterBrand = useSelector((state) => state.filters.filterBrand);
+  const filterCollection = useSelector(
+    (state) => state.filters.filterCollection
+  );
+  const filterTag = useSelector((state) => state.filters.filterTag);
+
+  const dispatch = useDispatch(); // Koristi dispatch za slanje akcija u Redux
 
   useEffect(() => {
     navigate(`/shop/page/${page}`);
     setStartNum((page - 1) * 12);
     setEndNum(page * 12);
-  }, [page, navigate]);
+    /*     alert(`Filter brend: ${filterBrand.join(", ")}`); */
+  }, [page, navigate, filterBrand]); // Ovdje koristiš filter iz Redux-a
+
+  useEffect(() => {
+    setPage(1);
+  }, [filterBrand, filterCollection, filterTag]);
+  useEffect(() => {
+    setPage(1);
+  }, [filterBrand, filterCollection, filterTag]);
 
   const goToNextPage = () => {
     setPage(page + 1);
@@ -28,39 +49,122 @@ const Shopplace = () => {
     }
   };
 
-  const handleCheckboxChange = (brand) => {
-    setFilterBrand((prevBrands) => {
-      if (prevBrands.includes(brand)) {
-        // Ako je već selektovan, ukloni ga
-        return prevBrands.filter((b) => b !== brand);
-      } else {
-        // Ako nije selektovan, dodaj ga
-        return [...prevBrands, brand];
-      }
-    });
+  const handleCheckboxChange = (value, setFilter, filterType) => {
+    let updatedFilters;
+    if (filterType === "brand") {
+      updatedFilters = filterBrand.includes(value)
+        ? filterBrand.filter((item) => item !== value)
+        : [...filterBrand, value];
+      dispatch(setFilterBrand(updatedFilters)); // Prosleđuješ akciju u Redux
+    }
+    if (filterType === "collection") {
+      updatedFilters = filterCollection.includes(value)
+        ? filterCollection.filter((item) => item !== value)
+        : [...filterCollection, value];
+      dispatch(setFilterCollection(updatedFilters)); // Prosleđuješ akciju u Redux
+    }
+    if (filterType === "tag") {
+      updatedFilters = filterTag.includes(value)
+        ? filterTag.filter((item) => item !== value)
+        : [...filterTag, value];
+      dispatch(setFilterTag(updatedFilters)); // Prosleđuješ akciju u Redux
+    }
   };
 
-  // Filtriranje proizvoda na osnovu selektovanih brendova
-  const filteredBrushes =
-    filterBrand.length > 0
-      ? brushes.filter((brush) => filterBrand.includes(brush.brend))
-      : brushes;
+  // Filtriranje proizvoda na osnovu selektovanih brendova, kolekcija i tagova
+  const filteredBrushes = brushes.filter((brush) => {
+    const brandMatch =
+      filterBrand.length === 0 || filterBrand.includes(brush.brend);
+    const collectionMatch =
+      filterCollection.length === 0 ||
+      filterCollection.includes(brush.collection);
+    const tagMatch =
+      filterTag.length === 0 ||
+      filterTag.some((tag) => brush.tags.includes(tag));
+    return brandMatch && collectionMatch && tagMatch;
+  });
 
   return (
     <div className="sp">
+      {/* Filteri */}
       <div className="sp-filter">
-        <p>Brand Shop Place</p>
+        {/* color filtriranje */}
+        <p className="c-gray p1">Color</p>
+        {[...new Set(brushes.flatMap((e) => e.colors))].map((color, index) => (
+          <div key={index}>
+            <input
+              className="filter-checkbox"
+              id={`color-${color}`}
+              type="checkbox"
+              checked={filterTag.includes(color)}
+              onChange={() => handleCheckboxChange(color, setFilterTag, "tag")}
+              style={{
+                backgroundColor: filterTag.includes(color)
+                  ? color
+                  : "transparent",
+                border: `2px solid ${color}`,
+                width: "20px",
+                height: "20px",
+                cursor: "pointer"
+              }}
+            />
+          </div>
+        ))}
+
+        {/* brend filtriranje */}
+        <p className="c-gray p1">Brand</p>
         {[...new Set(brushes.map((e) => e.brend))].map((brend, index) => (
           <div key={index}>
             <input
               id={`brend-${brend}`}
               type="checkbox"
-              onChange={() => handleCheckboxChange(brend)}
+              checked={filterBrand.includes(brend)}
+              onChange={() =>
+                handleCheckboxChange(brend, setFilterBrand, "brand")
+              } // Prosleđuješ filterTip
             />
             <label htmlFor={`brend-${brend}`}>{brend}</label>
           </div>
         ))}
+
+        {/* Collection filtriranje*/}
+        <p className="c-gray p1">Collection</p>
+        {[...new Set(brushes.map((e) => e.collection))].map(
+          (collection, index) => (
+            <div key={index}>
+              <input
+                id={`collection-${collection}`}
+                type="checkbox"
+                checked={filterCollection.includes(collection)}
+                onChange={() =>
+                  handleCheckboxChange(
+                    collection,
+                    setFilterCollection,
+                    "collection"
+                  )
+                }
+              />
+              <label htmlFor={`collection-${collection}`}>{collection}</label>
+            </div>
+          )
+        )}
+
+        {/* Filterani tagovi */}
+        <p className="c-gray p1">Tag</p>
+        {[...new Set(brushes.flatMap((e) => e.tags))].map((tag, index) => (
+          <div key={index}>
+            <input
+              id={`tag-${tag}`}
+              type="checkbox"
+              checked={filterTag.includes(tag)}
+              onChange={() => handleCheckboxChange(tag, setFilterTag, "tag")}
+            />
+            <label htmlFor={`tag-${tag}`}>{tag}</label>
+          </div>
+        ))}
       </div>
+
+      {/* Prikaz proizvoda */}
       <div className="sp-products">
         <div className="col-12 row">
           {filteredBrushes.slice(startNum, endNum).map((brush) => (

@@ -61,4 +61,31 @@
         justify-content: space-between;
 
     }
+
+}
+
+.filter-checkbox {
+    appearance: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--checkbox-color, #ccc); // 
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border 0.3s ease;
+
+    &:checked {
+        border: 2px solid #000;
+    }
+
+    &:hover {
+        opacity: 0.9;
+    }
+
+    &-container {
+        display: flex;
+        border: solid greenyellow;
+        gap: 10px;
+        align-items: center
+    }
 }

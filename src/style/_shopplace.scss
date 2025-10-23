@@ -1,5 +1,5 @@
 .sp {
-    border: solid red;
+
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -11,7 +11,7 @@
 
     &-products {
         width: 70%;
-        border: solid blue;
+
 
         &-pageCounter {
             display: flex;
@@ -19,9 +19,9 @@
             justify-content: center;
             align-items: center;
             border: none;
-            border: solid red;
-
 
         }
     }
+
+
 }

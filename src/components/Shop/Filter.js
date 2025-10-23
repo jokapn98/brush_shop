@@ -6,13 +6,13 @@ const Filter = ({ brushes }) => {
   const [selectedCollections, setSelectedCollections] = useState([]); // Drži selektovane kolekcije
   const [minPrice, setMinPrice] = useState("");
   const [maxPrice, setMaxPrice] = useState("");
-  const [selectedTags, setSelectedTags] = useState([]); // Drži selektovane tagove
+  /*  const [selectedTags, setSelectedTags] = useState([]); // Drži selektovane tagove
 
   const toggleColor = (color) => {
     setSelectedColors((prev) =>
       prev.includes(color) ? prev.filter((c) => c !== color) : [...prev, color]
     );
-  };
+  }; */
   const handleMinPriceChange = (e) => {
     const value = e.target.value;
     // Postavi minimum na 1
@@ -22,8 +22,7 @@ const Filter = ({ brushes }) => {
   };
 
   return (
-    <div className="col-lg-3 col-md-12">
-      {/* Colors */}
+    <div className="col-lg-3 col-md-12 bg-primary">
       <div className="col-12">
         {/* Colors */}
         <p className="p1 volkhov-regular col-12">Colors</p>
@@ -43,11 +42,10 @@ const Filter = ({ brushes }) => {
                   borderRadius: "50%"
                 }}
                 onClick={() =>
-                  setSelectedColors(
-                    (prev) =>
-                      prev.includes(color)
-                        ? prev.filter((c) => c !== color) // Uklanja ako je već selektovano
-                        : [...prev, color] // Dodaje ako nije selektovano
+                  setSelectedColors((prev) =>
+                    prev.includes(color)
+                      ? prev.filter((c) => c !== color) // Uklanja ako je već selektovano
+                      : [...prev, color]
                   )
                 }
               ></button>

@@ -1,6 +1,15 @@
-import { createSlice } from "@reduxjs/toolkit";
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] =
+  exports.ukloniCetkicu =
+  exports.azurirajCetkicu =
+  exports.addBrush =
+    void 0;
 
-const initialState = [
+var _toolkit = require("@reduxjs/toolkit");
+
+var initialState = [
   {
     id: 1,
     name: "Pro Blending Brush",
@@ -9,10 +18,7 @@ const initialState = [
       "Ova četkica omogućava lako blendanje senke na kapcima, za savršen izgled.",
     quantity: 20,
     rating: 4.8,
-    brushImg: [
-      "https://i.postimg.cc/66LNVtNz/image-950.png",
-      "https://i.postimg.cc/WznLs676/image-942.png"
-    ],
+    brushImg: "https://freeimage.host/i/image-942.K8OCyzB",
     tags: ["Real hair", "Eyes"],
     collections: ["Face"],
     price: "1400",
@@ -27,10 +33,8 @@ const initialState = [
     description: "Idealna za nanošenje senki i precizne linije.",
     quantity: 15,
     rating: 4.7,
-    brushImg: [
-      "https://i.postimg.cc/66LNVtNz/image-950.png",
-      "https://i.postimg.cc/WznLs676/image-942.png"
-    ],
+    brushImg:
+      "https://cdn.pixabay.com/photo/2021/01/06/07/52/lipsticks-5893480_1280.jpg",
     tags: ["Eyes", "Lips"],
     collections: ["Eyes"],
     price: "1200",
@@ -45,10 +49,8 @@ const initialState = [
     description: "Savršena za precizno nanošenje senki.",
     quantity: 25,
     rating: 4.6,
-    brushImg: [
-      "https://i.postimg.cc/66LNVtNz/image-950.png",
-      "https://i.postimg.cc/WznLs676/image-942.png"
-    ],
+    brushImg:
+      "https://cdn.pixabay.com/photo/2021/01/06/07/52/lipsticks-5893480_1280.jpg",
     tags: ["Eyeshadow"],
     collections: ["Eyes"],
     price: "1300",
@@ -63,10 +65,7 @@ const initialState = [
     description: "Za ravnomerno nanošenje pudera bez tragova.",
     quantity: 30,
     rating: 4.9,
-    brushImg: [
-      "https://i.postimg.cc/66LNVtNz/image-950.png",
-      "https://i.postimg.cc/WznLs676/image-942.png"
-    ],
+    brushImg: ["slika7.jpg", "slika8.jpg"],
     tags: ["Foundation"],
     collections: ["Face"],
     price: "1500",
@@ -81,10 +80,8 @@ const initialState = [
     description: "Precizna za prikrivanje sitnih nepravilnosti.",
     quantity: 18,
     rating: 4.5,
-    brushImg: [
-      "https://i.postimg.cc/66LNVtNz/image-950.png",
-      "https://i.postimg.cc/WznLs676/image-942.png"
-    ],
+    brushImg:
+      "https://cdn.pixabay.com/photo/2021/01/06/07/52/lipsticks-5893480_1280.jpg",
     tags: ["Lips"],
     collections: ["Face"],
     price: "1100",
@@ -99,10 +96,8 @@ const initialState = [
     description: "Savršena za konturiranje i oblikovanje obrva.",
     quantity: 22,
     rating: 4.7,
-    brushImg: [
-      "https://i.postimg.cc/66LNVtNz/image-950.png",
-      "https://i.postimg.cc/WznLs676/image-942.png"
-    ],
+    brushImg:
+      "https://cdn.pixabay.com/photo/2021/01/06/07/52/lipsticks-5893480_1280.jpg",
     tags: ["Eyebrow"],
     collections: ["Face"],
     price: "1450",
@@ -117,7 +112,8 @@ const initialState = [
     description: "Za lako i ravnomerno nanošenje rumenila.",
     quantity: 19,
     rating: 4.6,
-    brushImg: ["slika13.jpg", "slika14.jpg"],
+    brushImg:
+      "https://cdn.pixabay.com/photo/2021/01/06/07/52/lipsticks-5893480_1280.jpg",
     tags: ["Blush"],
     collections: ["Face"],
     price: "1250",
@@ -132,10 +128,8 @@ const initialState = [
     description: "Precizna za nanošenje karmina i sjaja za usne.",
     quantity: 20,
     rating: 4.4,
-    brushImg: [
-      "https://i.postimg.cc/66LNVtNz/image-950.png",
-      "https://i.postimg.cc/WznLs676/image-942.png"
-    ],
+    brushImg:
+      "https://cdn.pixabay.com/photo/2021/01/06/07/52/lipsticks-5893480_1280.jpg",
     tags: ["Lips"],
     collections: ["Lips"],
     price: "1150",
@@ -150,10 +144,8 @@ const initialState = [
     description: "Savršena za oblikovanje i definisanje obrva.",
     quantity: 23,
     rating: 4.5,
-    brushImg: [
-      "https://i.postimg.cc/66LNVtNz/image-950.png",
-      "https://i.postimg.cc/WznLs676/image-942.png"
-    ],
+    brushImg:
+      "https://cdn.pixabay.com/photo/2021/01/06/07/52/lipsticks-5893480_1280.jpg",
     tags: ["Eyebrow"],
     collections: ["Eyes"],
     price: "1350",
@@ -168,10 +160,8 @@ const initialState = [
     description: "Za savršen izgled tena bez linija.",
     quantity: 40,
     rating: 4.8,
-    brushImg: [
-      "https://i.postimg.cc/66LNVtNz/image-950.png",
-      "https://i.postimg.cc/WznLs676/image-942.png"
-    ],
+    brushImg:
+      "https://cdn.pixabay.com/photo/2021/01/06/07/52/lipsticks-5893480_1280.jpg",
     tags: ["Foundation"],
     collections: ["Face"],
     price: "900",
@@ -180,28 +170,39 @@ const initialState = [
     colors: ["#9370DB"] // ljubičasta
   }
 ];
-
-const brushesSlice = createSlice({
+var brushesSlice = (0, _toolkit.createSlice)({
   name: "brushes",
-  initialState,
+  initialState: initialState,
   reducers: {
-    addBrush: (state, action) => {
+    addBrush: function addBrush(state, action) {
       state.push(action.payload);
     },
-    azurirajCetkicu: (state, action) => {
-      const { id, podaci } = action.payload;
-      const cetkica = state.find((item) => item.id === id);
+    azurirajCetkicu: function azurirajCetkicu(state, action) {
+      var _action$payload = action.payload,
+        id = _action$payload.id,
+        podaci = _action$payload.podaci;
+      var cetkica = state.find(function (item) {
+        return item.id === id;
+      });
+
       if (cetkica) {
         Object.assign(cetkica, podaci);
       }
     },
-    ukloniCetkicu: (state, action) => {
-      const id = action.payload;
-      return state.filter((item) => item.id !== id);
+    ukloniCetkicu: function ukloniCetkicu(state, action) {
+      var id = action.payload;
+      return state.filter(function (item) {
+        return item.id !== id;
+      });
     }
   }
 });
-
-export const { addBrush, azurirajCetkicu, ukloniCetkicu } =
-  brushesSlice.actions;
-export default brushesSlice.reducer;
+var _brushesSlice$actions = brushesSlice.actions,
+  addBrush = _brushesSlice$actions.addBrush,
+  azurirajCetkicu = _brushesSlice$actions.azurirajCetkicu,
+  ukloniCetkicu = _brushesSlice$actions.ukloniCetkicu;
+exports.ukloniCetkicu = ukloniCetkicu;
+exports.azurirajCetkicu = azurirajCetkicu;
+exports.addBrush = addBrush;
+var _default = brushesSlice.reducer;
+exports["default"] = _default;

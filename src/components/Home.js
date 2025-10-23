@@ -7,9 +7,9 @@ const Home = () => {
       <div className="container ">
         <div className="col-12 home">
           <div className="col-md-4 col-sm-3 home-bg homel"></div>
-          <div className="col-md-4 col-sm-6 col-12 home-center   ">
+          <div className="col-md-4 col-sm-6 col-12 home-center">
             <div className="home-content   ">
-              <div className="home-bg homet"></div>
+              <div className="homes-bg homet"></div>
               <div className="home-content-center   ">
                 <div className="jumbo">ULTIMATE</div>
                 <div className="sale-jumbo fw-500">SALE</div>
