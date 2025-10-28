@@ -23,14 +23,14 @@ const Shopplace = () => {
   );
   const filterTag = useSelector((state) => state.filters.filterTag);
 
-  const dispatch = useDispatch(); // Koristi dispatch za slanje akcija u Redux
+  const dispatch = useDispatch();
 
   useEffect(() => {
     navigate(`/shop/page/${page}`);
     setStartNum((page - 1) * 12);
     setEndNum(page * 12);
     /*     alert(`Filter brend: ${filterBrand.join(", ")}`); */
-  }, [page, navigate, filterBrand]); // Ovdje koristiš filter iz Redux-a
+  }, [page, navigate, filterBrand]); // filter iz reduxa
 
   useEffect(() => {
     setPage(1);
@@ -51,27 +51,30 @@ const Shopplace = () => {
 
   const handleCheckboxChange = (value, setFilter, filterType) => {
     let updatedFilters;
+
     if (filterType === "brand") {
       updatedFilters = filterBrand.includes(value)
         ? filterBrand.filter((item) => item !== value)
         : [...filterBrand, value];
-      dispatch(setFilterBrand(updatedFilters)); // Prosleđuješ akciju u Redux
+      dispatch(setFilterBrand(updatedFilters));
     }
+
     if (filterType === "collection") {
       updatedFilters = filterCollection.includes(value)
         ? filterCollection.filter((item) => item !== value)
         : [...filterCollection, value];
-      dispatch(setFilterCollection(updatedFilters)); // Prosleđuješ akciju u Redux
+      dispatch(setFilterCollection(updatedFilters));
     }
+
     if (filterType === "tag") {
       updatedFilters = filterTag.includes(value)
         ? filterTag.filter((item) => item !== value)
         : [...filterTag, value];
-      dispatch(setFilterTag(updatedFilters)); // Prosleđuješ akciju u Redux
+      dispatch(setFilterTag(updatedFilters));
     }
   };
 
-  // Filtriranje proizvoda na osnovu selektovanih brendova, kolekcija i tagova
+  // Filtriranje proizvoda
   const filteredBrushes = brushes.filter((brush) => {
     const brandMatch =
       filterBrand.length === 0 || filterBrand.includes(brush.brend);

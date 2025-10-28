@@ -1,6 +1,6 @@
 import React from "react";
 import { Layout } from "../components/Layout";
-import Shop from "../components/Shop/Shop";
+
 import { useSelector } from "react-redux"; // Importuj useSelector
 import Recomendation from "../components/recomendation/Recomendation";
 import Quality from "../components/Quality";

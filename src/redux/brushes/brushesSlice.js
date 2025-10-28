@@ -11,14 +11,15 @@ const initialState = [
     rating: 4.8,
     brushImg: [
       "https://i.postimg.cc/66LNVtNz/image-950.png",
-      "https://i.postimg.cc/WznLs676/image-942.png"
+      "https://i.postimg.cc/8chqPhc7/image-942.jpg",
+      "https://i.postimg.cc/L8znK72b/IMG-9617.jpg"
     ],
     tags: ["Real hair", "Eyes"],
     collections: ["Face"],
     price: "1400",
     topSellers: true,
     brend: "Maange",
-    colors: ["#FFC0CB"] // roze
+    colors: ["#FFC0CB"]
   },
   {
     id: 2,
@@ -29,14 +30,14 @@ const initialState = [
     rating: 4.7,
     brushImg: [
       "https://i.postimg.cc/66LNVtNz/image-950.png",
-      "https://i.postimg.cc/WznLs676/image-942.png"
+      "https://i.postimg.cc/mD6ryWyY/IMG-9618.jpg"
     ],
     tags: ["Eyes", "Lips"],
     collections: ["Eyes"],
     price: "1200",
     topSellers: true,
     brend: "Maange",
-    colors: ["#000000"] // crna
+    colors: ["#000000"]
   },
   {
     id: 3,
@@ -47,14 +48,14 @@ const initialState = [
     rating: 4.6,
     brushImg: [
       "https://i.postimg.cc/66LNVtNz/image-950.png",
-      "https://i.postimg.cc/WznLs676/image-942.png"
+      "https://i.postimg.cc/ry3mdcm8/IMG-9627.jpg"
     ],
     tags: ["Eyeshadow"],
     collections: ["Eyes"],
     price: "1300",
     topSellers: false,
     brend: "Maange",
-    colors: ["#8B4513"] // braon
+    colors: ["#8B4513"]
   },
   {
     id: 4,
@@ -64,15 +65,15 @@ const initialState = [
     quantity: 30,
     rating: 4.9,
     brushImg: [
-      "https://i.postimg.cc/66LNVtNz/image-950.png",
-      "https://i.postimg.cc/WznLs676/image-942.png"
+      "https://i.postimg.cc/8chqPhc7/image-942.jpg",
+      "https://i.postimg.cc/mD6ryWyY/IMG-9618.jpg"
     ],
     tags: ["Foundation"],
     collections: ["Face"],
     price: "1500",
     topSellers: true,
     brend: "Maange",
-    colors: ["#FFD700"] // zlatna
+    colors: ["#FFD700"]
   },
   {
     id: 5,
@@ -82,15 +83,15 @@ const initialState = [
     quantity: 18,
     rating: 4.5,
     brushImg: [
-      "https://i.postimg.cc/66LNVtNz/image-950.png",
-      "https://i.postimg.cc/WznLs676/image-942.png"
+      "https://i.postimg.cc/L8znK72b/IMG-9617.jpg",
+      "https://i.postimg.cc/66LNVtNz/image-950.png"
     ],
-    tags: ["Lips"],
+    tags: ["Face"],
     collections: ["Face"],
     price: "1100",
     topSellers: false,
     brend: "Maange",
-    colors: ["#FAEBD7"] // bež
+    colors: ["#FAEBD7"]
   },
   {
     id: 6,
@@ -100,15 +101,16 @@ const initialState = [
     quantity: 22,
     rating: 4.7,
     brushImg: [
-      "https://i.postimg.cc/66LNVtNz/image-950.png",
-      "https://i.postimg.cc/WznLs676/image-942.png"
+      "https://i.postimg.cc/8chqPhc7/image-942.jpg",
+      "https://i.postimg.cc/ry3mdcm8/IMG-9627.jpg",
+      "https://i.postimg.cc/L8znK72b/IMG-9617.jpg"
     ],
     tags: ["Eyebrow"],
     collections: ["Face"],
     price: "1450",
     topSellers: true,
     brend: "Maange",
-    colors: ["#A52A2A"] // tamno braon
+    colors: ["#A52A2A"]
   },
   {
     id: 7,
@@ -117,13 +119,16 @@ const initialState = [
     description: "Za lako i ravnomerno nanošenje rumenila.",
     quantity: 19,
     rating: 4.6,
-    brushImg: ["slika13.jpg", "slika14.jpg"],
+    brushImg: [
+      "https://i.postimg.cc/mD6ryWyY/IMG-9618.jpg",
+      "https://i.postimg.cc/ry3mdcm8/IMG-9627.jpg"
+    ],
     tags: ["Blush"],
     collections: ["Face"],
     price: "1250",
     topSellers: false,
     brend: "Jaff",
-    colors: ["#FF6347"] // koralno crvena
+    colors: ["#FF6347"]
   },
   {
     id: 8,
@@ -132,16 +137,13 @@ const initialState = [
     description: "Precizna za nanošenje karmina i sjaja za usne.",
     quantity: 20,
     rating: 4.4,
-    brushImg: [
-      "https://i.postimg.cc/66LNVtNz/image-950.png",
-      "https://i.postimg.cc/WznLs676/image-942.png"
-    ],
+    brushImg: ["https://i.postimg.cc/L8znK72b/IMG-9617.jpg"],
     tags: ["Lips"],
     collections: ["Lips"],
     price: "1150",
     topSellers: false,
     brend: "Maange",
-    colors: ["#D3D3D3"] // siva
+    colors: ["#D3D3D3"]
   },
   {
     id: 9,
@@ -152,14 +154,15 @@ const initialState = [
     rating: 4.5,
     brushImg: [
       "https://i.postimg.cc/66LNVtNz/image-950.png",
-      "https://i.postimg.cc/WznLs676/image-942.png"
+      "https://i.postimg.cc/mD6ryWyY/IMG-9618.jpg",
+      "https://i.postimg.cc/ry3mdcm8/IMG-9627.jpg"
     ],
     tags: ["Eyebrow"],
     collections: ["Eyes"],
     price: "1350",
     topSellers: true,
     brend: "Maange",
-    colors: ["#008080"] // tirkiz
+    colors: ["#008080"]
   },
   {
     id: 10,
@@ -169,15 +172,167 @@ const initialState = [
     quantity: 40,
     rating: 4.8,
     brushImg: [
-      "https://i.postimg.cc/66LNVtNz/image-950.png",
-      "https://i.postimg.cc/WznLs676/image-942.png"
+      "https://i.postimg.cc/8chqPhc7/image-942.jpg",
+      "https://i.postimg.cc/L8znK72b/IMG-9617.jpg"
     ],
     tags: ["Foundation"],
     collections: ["Face"],
     price: "900",
     topSellers: true,
     brend: "Jaff",
-    colors: ["#9370DB"] // ljubičasta
+    colors: ["#9370DB"]
+  },
+
+  // --- Novi proizvodi 11–20 ---
+  {
+    id: 11,
+    name: "Powder Brush",
+    shortDescription: "Četkica za puder",
+    description: "Meka i gusta četkica za završni sloj pudera.",
+    quantity: 28,
+    rating: 4.9,
+    brushImg: ["https://i.postimg.cc/ry3mdcm8/IMG-9627.jpg"],
+    tags: ["Powder"],
+    collections: ["Face"],
+    price: "1550",
+    topSellers: true,
+    brend: "Jaff",
+    colors: ["#FFE4B5"]
+  },
+  {
+    id: 12,
+    name: "Contour Brush",
+    shortDescription: "Četkica za konturisanje lica",
+    description: "Savršeno oblikuje konture lica za definisan izgled.",
+    quantity: 16,
+    rating: 4.6,
+    brushImg: [
+      "https://i.postimg.cc/mD6ryWyY/IMG-9618.jpg",
+      "https://i.postimg.cc/L8znK72b/IMG-9617.jpg"
+    ],
+    tags: ["Contour"],
+    collections: ["Face"],
+    price: "1450",
+    topSellers: false,
+    brend: "Maange",
+    colors: ["#8B0000"]
+  },
+  {
+    id: 13,
+    name: "Fan Brush",
+    shortDescription: "Lepezasta četkica za hajlajter",
+    description: "Savršena za nanošenje hajlajtera i skidanje viška pudera.",
+    quantity: 21,
+    rating: 4.7,
+    brushImg: ["https://i.postimg.cc/8chqPhc7/image-942.jpg"],
+    tags: ["Highlighter"],
+    collections: ["Face"],
+    price: "1300",
+    topSellers: false,
+    brend: "Jaff",
+    colors: ["#DAA520"]
+  },
+  {
+    id: 14,
+    name: "Precision Liner Brush",
+    shortDescription: "Tanka četkica za eyeliner",
+    description: "Precizna četkica za tečni ajlajner i gel formule.",
+    quantity: 18,
+    rating: 4.8,
+    brushImg: [
+      "https://i.postimg.cc/L8znK72b/IMG-9617.jpg",
+      "https://i.postimg.cc/ry3mdcm8/IMG-9627.jpg"
+    ],
+    tags: ["Eyes"],
+    collections: ["Eyes"],
+    price: "1150",
+    topSellers: true,
+    brend: "Maange",
+    colors: ["#000000"]
+  },
+  {
+    id: 15,
+    name: "Kabuki Brush",
+    shortDescription: "Kompaktna četkica za putovanja",
+    description: "Savršena za nanošenje mineralnog pudera.",
+    quantity: 32,
+    rating: 4.9,
+    brushImg: ["https://i.postimg.cc/mD6ryWyY/IMG-9618.jpg"],
+    tags: ["Travel", "Powder"],
+    collections: ["Face"],
+    price: "1600",
+    topSellers: true,
+    brend: "Jaff",
+    colors: ["#B8860B"]
+  },
+  {
+    id: 16,
+    name: "Crease Brush",
+    shortDescription: "Četkica za pregib oka",
+    description: "Za meko blendanje senke u pregibu kapka.",
+    quantity: 25,
+    rating: 4.6,
+    brushImg: ["https://i.postimg.cc/L8znK72b/IMG-9617.jpg"],
+    tags: ["Eyes"],
+    collections: ["Eyes"],
+    price: "1250",
+    topSellers: false,
+    brend: "Maange",
+    colors: ["#D2B48C"]
+  },
+  {
+    id: 17,
+    name: "Dual-Ended Brush",
+    shortDescription: "Dvosmerna četkica za oči i obrve",
+    description: "Jedna strana za senke, druga za definisanje obrva.",
+    quantity: 14,
+    rating: 4.5,
+    brushImg: [
+      "https://i.postimg.cc/ry3mdcm8/IMG-9627.jpg",
+      "https://i.postimg.cc/8chqPhc7/image-942.jpg"
+    ],
+    tags: ["Eyes", "Eyebrow"],
+    collections: ["Eyes"],
+    price: "1350",
+    topSellers: false,
+    brend: "Jaff",
+    colors: ["#708090"]
+  },
+  {
+    id: 18,
+    name: "Mini Detail Brush",
+    shortDescription: "Mala četkica za detaljan rad",
+    description: "Za precizne ivice i sitne površine.",
+    quantity: 20,
+    rating: 4.4,
+    brushImg: [
+      "https://i.postimg.cc/L8znK72b/IMG-9617.jpg",
+      "https://i.postimg.cc/mD6ryWyY/IMG-9618.jpg"
+    ],
+    tags: ["Lips", "Eyes"],
+    collections: ["Detail"],
+    price: "950",
+    topSellers: false,
+    brend: "Maange",
+    colors: ["#CD853F"]
+  },
+  {
+    id: 19,
+    name: "Buffer Brush",
+    shortDescription: "Četkica za blendanje pudera",
+    description: "Za besprekoran prelaz i prirodan izgled tena.",
+    quantity: 30,
+    rating: 4.9,
+    brushImg: [
+      "https://i.postimg.cc/8chqPhc7/image-942.jpg",
+      "https://i.postimg.cc/ry3mdcm8/IMG-9627.jpg"
+    ],
+    tags: ["Foundation"],
+    collections: ["Face"],
+    price: "1550",
+    topSellers: true,
+    brend: "Maange",
+    colors: ["#FFEBCD"]
   }
 ];
 
