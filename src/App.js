@@ -6,6 +6,7 @@ import ProductDetailsPage from "./pages/ProductDetailsPage";
 import ContactPage from "./pages/ContactPage";
 import ProductManipulationPage from "./pages/ProductManipulationPage";
 function App() {
+<<<<<<< HEAD
   return (
     <BrowserRouter>
       <Routes>
@@ -23,6 +24,9 @@ function App() {
       </Routes>
     </BrowserRouter>
   );
+=======
+  return <div className="App">test onx</div>;
+>>>>>>> development
 }
 
 export default App;
