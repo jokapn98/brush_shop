@@ -31,7 +31,7 @@ function NavbarMenu() {
   return (
     <Navbar expand="lg" className="bg-body-tertiary py-3">
       <Container>
-        <Navbar.Brand className="h4 volkhov-regular" href="/">
+        <Navbar.Brand className="h4 volkhov-regular navbar-logo" href="/">
           BRUSHES
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

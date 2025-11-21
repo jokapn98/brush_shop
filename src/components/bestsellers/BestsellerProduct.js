@@ -34,7 +34,6 @@ const BestsellerProduct = ({
       <div className="best-product col-11">
         <Link to={`/product/${id}`}>
           <div className="best-product-content">
-            {/* --- SLIKE --- */}
             <div
               className="best-product-image-wrapper"
               style={{ position: "relative" }} //
@@ -42,7 +41,7 @@ const BestsellerProduct = ({
               <img
                 src={brushImg[currentImageIndex]}
                 alt={`${name} ${currentImageIndex}`}
-                className="brush-image"
+                className="brush-image best-image"
               />
 
               <button
@@ -85,7 +84,7 @@ const BestsellerProduct = ({
                 ›
               </button>
             </div>
-            <div className="p4 col-12 starimage ">
+            <div className="p4 col-12 starimage tdn">
               <img className="star" src={star} alt="" />
               <img className="star" src={star} alt="" />
               <img className="star" src={star} alt="" />
@@ -94,7 +93,8 @@ const BestsellerProduct = ({
             </div>
             <div className="best-product-desc  col-12">
               <div className="col-12">
-                <p className="p1 c-gray">{name}</p> {/* Prikazivanje name */}
+                <p className="p1 c-gray tdn">{name}</p>
+                {/* Prikazivanje name */}
                 <p className="p4 c-gunmetal-gray">{shortDescription}</p>
               </div>
             </div>

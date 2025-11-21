@@ -13,6 +13,10 @@
     }
   }
 
+  &-logo {
+    width: 220px !important;
+  }
+
   &-searching {
     margin-top: 0.5rem;
     width: 100%;
@@ -23,20 +27,19 @@
     }
   }
 }
-.nav{
-    &-links {
-  display: flex;
-  gap: 1.5rem; // razmak između linkova
-  margin-left: 2rem; // udaljenost od loga
-}
+.nav {
+  &-links {
+    display: flex;
+    gap: 1.5rem; // razmak između linkova
+    margin-left: 2rem; // udaljenost od loga
+  }
 
-
-&-button{
+  &-button {
     font-size: 10px;
-    padding: 5px 10px!important;
-}
-&-input{
+    padding: 5px 10px !important;
+  }
+  &-input {
     font-size: 12px;
-    padding: 5px 10px!important;
-}
+    padding: 5px 10px !important;
+  }
 }

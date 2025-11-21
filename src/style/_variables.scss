@@ -34,10 +34,12 @@ $black-main: #000000;
     margin: 0 !important;
     padding: 0 !important;
     color: $black-main;
+    width: 100%;
 }
 
 body {
     background-color: $white-pure;
+    
 }
 
 .jost {
@@ -443,12 +445,4 @@ body {
     width: 30px;
     height: 30px;
     margin-right: 5px !important;
-}
-.hero {
-  background-image: url('putanja/do/slike.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  height: 100vh; /* ceo ekran */
 }
