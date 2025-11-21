@@ -22,7 +22,7 @@ const DodajCetkicuForma = () => {
     colors: []
   });
 
-  // Funkcija za promenu stanja kada se unesu podaci u formu
+  // Menja stanje kada se unesu pod. u formu
   const handleChange = (e) => {
     const { name, value } = e.target;
     setNewBrush((prevState) => ({
@@ -31,17 +31,16 @@ const DodajCetkicuForma = () => {
     }));
   };
 
-  // Funkcija za slanje podataka u Redux kada je forma poslata
+  // Kad je poslata forma, salje stanje u redux
   const handleSubmit = (e) => {
     e.preventDefault();
 
     // Dodavanje ID-a (generisanog uuid) pre slanja u Redux
     const brushWithId = { ...newBrush, id: uuidv4() };
 
-    // Dispečujte akciju da dodate četkicu u stanje
     dispatch(addBrush(brushWithId));
 
-    // Resetovanje forme nakon što je četkica dodata
+    // Reserovanje kad se doda cetkica
     setNewBrush({
       name: "",
       shortDescription: "",

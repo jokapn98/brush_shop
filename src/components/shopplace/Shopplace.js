@@ -1,176 +1,180 @@
 import React, { useEffect, useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import ShopProduct from "../Shop/ShopProduct";
+
 import {
   setFilterBrand,
   setFilterCollection,
-  setFilterTag
+  setFilterTag,
+  setFilterColors
 } from "../../redux/filter/filterSlice";
+import { clearSearch } from "../../redux/search/searchSlice";
 
 const Shopplace = () => {
   const { pageNum } = useParams();
-  const navigate = useNavigate();
   const [page, setPage] = useState(Number(pageNum) || 1);
-  const [startNum, setStartNum] = useState((page - 1) * 12);
-  const [endNum, setEndNum] = useState(page * 12);
-  const brushes = useSelector((state) => state.brushes);
 
-  // Prvo, koristi useSelector da dohvatiš filtere iz Redux stanja
+  const brushes = useSelector((state) => state.brushes);
+  const searchTerm = (useSelector((state) => state.search) || "").toLowerCase();
   const filterBrand = useSelector((state) => state.filters.filterBrand);
   const filterCollection = useSelector(
     (state) => state.filters.filterCollection
   );
   const filterTag = useSelector((state) => state.filters.filterTag);
+  const filterColors = useSelector((state) => state.filters.filterColors);
 
   const dispatch = useDispatch();
+  const resetFilters = () => {
+    dispatch(setFilterColors([]));
+    dispatch(setFilterBrand([]));
+    dispatch(setFilterCollection([]));
+    dispatch(setFilterTag([]));
+    dispatch(clearSearch());
+  };
 
-  useEffect(() => {
-    navigate(`/shop/page/${page}`);
-    setStartNum((page - 1) * 12);
-    setEndNum(page * 12);
-    /*     alert(`Filter brend: ${filterBrand.join(", ")}`); */
-  }, [page, navigate, filterBrand]); // filter iz reduxa
-
-  useEffect(() => {
-    setPage(1);
-  }, [filterBrand, filterCollection, filterTag]);
   useEffect(() => {
     setPage(1);
-  }, [filterBrand, filterCollection, filterTag]);
+  }, [searchTerm, filterBrand, filterCollection, filterTag, filterColors]);
 
-  const goToNextPage = () => {
-    setPage(page + 1);
-  };
-
-  const goToPreviousPage = () => {
-    if (page > 1) {
-      setPage(page - 1);
-    }
-  };
-
-  const handleCheckboxChange = (value, setFilter, filterType) => {
-    let updatedFilters;
-
-    if (filterType === "brand") {
-      updatedFilters = filterBrand.includes(value)
-        ? filterBrand.filter((item) => item !== value)
-        : [...filterBrand, value];
-      dispatch(setFilterBrand(updatedFilters));
-    }
-
-    if (filterType === "collection") {
-      updatedFilters = filterCollection.includes(value)
-        ? filterCollection.filter((item) => item !== value)
-        : [...filterCollection, value];
-      dispatch(setFilterCollection(updatedFilters));
-    }
-
-    if (filterType === "tag") {
-      updatedFilters = filterTag.includes(value)
-        ? filterTag.filter((item) => item !== value)
-        : [...filterTag, value];
-      dispatch(setFilterTag(updatedFilters));
-    }
-  };
-
-  // Filtriranje proizvoda
+  // FILTER + SEARCH
   const filteredBrushes = brushes.filter((brush) => {
+    const name = brush.name?.toLowerCase() || "";
+    const desc = brush.description?.toLowerCase() || "";
+
+    const searchMatch =
+      searchTerm === "" ||
+      name.includes(searchTerm) ||
+      desc.includes(searchTerm);
     const brandMatch =
       filterBrand.length === 0 || filterBrand.includes(brush.brend);
     const collectionMatch =
       filterCollection.length === 0 ||
-      filterCollection.includes(brush.collection);
+      brush.collections.some((c) => filterCollection.includes(c));
     const tagMatch =
-      filterTag.length === 0 ||
-      filterTag.some((tag) => brush.tags.includes(tag));
-    return brandMatch && collectionMatch && tagMatch;
+      filterTag.length === 0 || brush.tags.some((t) => filterTag.includes(t));
+    const colorMatch =
+      filterColors.length === 0 ||
+      brush.colors.some((c) => filterColors.includes(c));
+
+    return (
+      searchMatch && brandMatch && collectionMatch && tagMatch && colorMatch
+    );
   });
+
+  const start = (page - 1) * 12;
+  const end = page * 12;
+  const paginatedBrushes = filteredBrushes.slice(start, end);
+
+  const goToNextPage = () => setPage((p) => p + 1);
+  const goToPreviousPage = () => setPage((p) => (p > 1 ? p - 1 : 1));
+
+  const handleCheckboxChange = (value, filterType) => {
+    if (filterType === "brand") {
+      const updated = filterBrand.includes(value)
+        ? filterBrand.filter((i) => i !== value)
+        : [...filterBrand, value];
+      dispatch(setFilterBrand(updated));
+    }
+
+    if (filterType === "collection") {
+      const updated = filterCollection.includes(value)
+        ? filterCollection.filter((i) => i !== value)
+        : [...filterCollection, value];
+      dispatch(setFilterCollection(updated));
+    }
+
+    if (filterType === "tag") {
+      const updated = filterTag.includes(value)
+        ? filterTag.filter((i) => i !== value)
+        : [...filterTag, value];
+      dispatch(setFilterTag(updated));
+    }
+  };
 
   return (
     <div className="sp">
-      {/* Filteri */}
+      {/* FILTERI */}
       <div className="sp-filter">
-        {/* color filtriranje */}
+        <button
+          onClick={resetFilters}
+          style={{
+            padding: "8px 12px",
+            width: "120px",
+            margin: "10px 0px",
+            backgroundColor: "transparent",
+            border: "1px solid #212529",
+            cursor: "pointer",
+            borderRadius: "5px",
+            fontSize: "12px"
+          }}
+        >
+          Reset Filters
+        </button>
+        {/* COLORS */}
         <p className="c-gray p1">Color</p>
-        {[...new Set(brushes.flatMap((e) => e.colors))].map((color, index) => (
-          <div key={index}>
-            <input
-              className="filter-checkbox"
-              id={`color-${color}`}
-              type="checkbox"
-              checked={filterTag.includes(color)}
-              onChange={() => handleCheckboxChange(color, setFilterTag, "tag")}
-              style={{
-                backgroundColor: filterTag.includes(color)
-                  ? color
-                  : "transparent",
-                border: `2px solid ${color}`,
-                width: "20px",
-                height: "20px",
-                cursor: "pointer"
+        <div className="colors-container">
+          {[...new Set(brushes.flatMap((b) => b.colors))].map((color, i) => (
+            <div
+              key={i}
+              onClick={() => {
+                const updated = filterColors.includes(color)
+                  ? filterColors.filter((c) => c !== color)
+                  : [...filterColors, color];
+                dispatch(setFilterColors(updated));
               }}
+              className={`color-circle ${
+                filterColors.includes(color) ? "selected" : ""
+              }`}
+              style={{ backgroundColor: color }}
             />
-          </div>
-        ))}
+          ))}
+        </div>
 
-        {/* brend filtriranje */}
+        {/* BRAND */}
         <p className="c-gray p1">Brand</p>
-        {[...new Set(brushes.map((e) => e.brend))].map((brend, index) => (
-          <div key={index}>
+        {[...new Set(brushes.map((b) => b.brend))].map((br, i) => (
+          <div key={i} className="filter-item">
             <input
-              id={`brend-${brend}`}
               type="checkbox"
-              checked={filterBrand.includes(brend)}
-              onChange={() =>
-                handleCheckboxChange(brend, setFilterBrand, "brand")
-              } // Prosleđuješ filterTip
+              checked={filterBrand.includes(br)}
+              onChange={() => handleCheckboxChange(br, "brand")}
             />
-            <label htmlFor={`brend-${brend}`}>{brend}</label>
+            <label>{br}</label>
           </div>
         ))}
 
-        {/* Collection filtriranje*/}
+        {/* COLLECTION */}
         <p className="c-gray p1">Collection</p>
-        {[...new Set(brushes.map((e) => e.collection))].map(
-          (collection, index) => (
-            <div key={index}>
-              <input
-                id={`collection-${collection}`}
-                type="checkbox"
-                checked={filterCollection.includes(collection)}
-                onChange={() =>
-                  handleCheckboxChange(
-                    collection,
-                    setFilterCollection,
-                    "collection"
-                  )
-                }
-              />
-              <label htmlFor={`collection-${collection}`}>{collection}</label>
-            </div>
-          )
-        )}
-
-        {/* Filterani tagovi */}
-        <p className="c-gray p1">Tag</p>
-        {[...new Set(brushes.flatMap((e) => e.tags))].map((tag, index) => (
-          <div key={index}>
+        {[...new Set(brushes.flatMap((b) => b.collections))].map((col, i) => (
+          <div key={i} className="filter-item">
             <input
-              id={`tag-${tag}`}
+              type="checkbox"
+              checked={filterCollection.includes(col)}
+              onChange={() => handleCheckboxChange(col, "collection")}
+            />
+            <label>{col}</label>
+          </div>
+        ))}
+
+        {/* TAG */}
+        <p className="c-gray p1">Tag</p>
+        {[...new Set(brushes.flatMap((b) => b.tags))].map((tag, i) => (
+          <div key={i} className="filter-item">
+            <input
               type="checkbox"
               checked={filterTag.includes(tag)}
-              onChange={() => handleCheckboxChange(tag, setFilterTag, "tag")}
+              onChange={() => handleCheckboxChange(tag, "tag")}
             />
-            <label htmlFor={`tag-${tag}`}>{tag}</label>
+            <label>{tag}</label>
           </div>
         ))}
       </div>
 
-      {/* Prikaz proizvoda */}
+      {/* PROIZVODI */}
       <div className="sp-products">
         <div className="col-12 row">
-          {filteredBrushes.slice(startNum, endNum).map((brush) => (
+          {paginatedBrushes.map((brush) => (
             <ShopProduct
               key={brush.id}
               id={brush.id}
@@ -181,16 +185,12 @@ const Shopplace = () => {
             />
           ))}
         </div>
-        <div className="bb">
-          <div className="sp-products-pageCounter">
-            <div className="">
-              <button onClick={goToPreviousPage}>&lt;</button>
-            </div>
-            <div className="">{page}</div>
-            <div className="">
-              <button onClick={goToNextPage}>&gt;</button>
-            </div>
-          </div>
+
+        {/* PAGINACIJA */}
+        <div className="sp-products-pageCounter">
+          <button onClick={goToPreviousPage}>&lt;</button>
+          <div>{page}</div>
+          <button onClick={goToNextPage}>&gt;</button>
         </div>
       </div>
     </div>

@@ -13,7 +13,7 @@ const Test = () => {
   };
 
   return (
-    <div className="bb">
+    <div className="">
       <input onChange={funkcija} type="text" placeholder="test input" />
       <button onClick={handleSubmit}>Submit</button>
     </div>

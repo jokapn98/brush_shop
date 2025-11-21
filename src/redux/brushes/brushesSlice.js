@@ -333,6 +333,101 @@ const initialState = [
     topSellers: true,
     brend: "Maange",
     colors: ["#FFEBCD"]
+  },
+  {
+    id: 20,
+    name: "Stippling Brush",
+    shortDescription: "Duo-fiber četkica za lagan finish",
+    description:
+      "Idealna za nanošenje tečnog pudera i kreiranje prirodnog, airbrush efekta.",
+    quantity: 22,
+    rating: 4.7,
+    brushImg: [
+      "https://i.postimg.cc/mD6ryWyY/IMG-9618.jpg",
+      "https://i.postimg.cc/66LNVtNz/image-950.png"
+    ],
+    tags: ["Foundation", "Face"],
+    collections: ["Face"],
+    price: "1500",
+    topSellers: false,
+    brend: "Maange",
+    colors: ["#C0C0C0"]
+  },
+  {
+    id: 21,
+    name: "Smudge Brush",
+    shortDescription: "Četkica za razmazivanje senke",
+    description:
+      "Savršena za smokey eye efekte i precizno razmazivanje donje linije oka.",
+    quantity: 17,
+    rating: 4.6,
+    brushImg: [
+      "https://i.postimg.cc/ry3mdcm8/IMG-9627.jpg",
+      "https://i.postimg.cc/L8znK72b/IMG-9617.jpg"
+    ],
+    tags: ["Eyes", "Smudge"],
+    collections: ["Eyes"],
+    price: "1150",
+    topSellers: false,
+    brend: "Jaff",
+    colors: ["#A9A9A9"]
+  },
+  {
+    id: 22,
+    name: "Highlight Brush",
+    shortDescription: "Četkica za hajlajter",
+    description:
+      "Mekane, blago zašiljene dlačice omogućavaju kontrolisano nanošenje hajlajtera.",
+    quantity: 27,
+    rating: 4.8,
+    brushImg: [
+      "https://i.postimg.cc/8chqPhc7/image-942.jpg",
+      "https://i.postimg.cc/ry3mdcm8/IMG-9627.jpg"
+    ],
+    tags: ["Highlighter"],
+    collections: ["Face"],
+    price: "1350",
+    topSellers: true,
+    brend: "Maange",
+    colors: ["#FFF8DC"]
+  },
+  {
+    id: 23,
+    name: "Brow & Lash Duo Brush",
+    shortDescription: "Četkica sa češljićem za obrve i trepavice",
+    description:
+      "Dvosmerni dizajn za precizno češljanje obrva i razdvajanje trepavica.",
+    quantity: 19,
+    rating: 4.5,
+    brushImg: [
+      "https://i.postimg.cc/L8znK72b/IMG-9617.jpg",
+      "https://i.postimg.cc/mD6ryWyY/IMG-9618.jpg"
+    ],
+    tags: ["Eyebrow", "Lashes"],
+    collections: ["Eyes"],
+    price: "1050",
+    topSellers: false,
+    brend: "Jaff",
+    colors: ["#696969"]
+  },
+  {
+    id: 24,
+    name: "Precision Concealer Brush",
+    shortDescription: "Sitna četkica za korektor",
+    description:
+      "Odlična za prekrivanje sitnih nepravilnosti i nanošenje korektora oko očiju.",
+    quantity: 24,
+    rating: 4.7,
+    brushImg: [
+      "https://i.postimg.cc/66LNVtNz/image-950.png",
+      "https://i.postimg.cc/8chqPhc7/image-942.jpg"
+    ],
+    tags: ["Concealer"],
+    collections: ["Face"],
+    price: "1200",
+    topSellers: false,
+    brend: "Maange",
+    colors: ["#F5DEB3"]
   }
 ];
 

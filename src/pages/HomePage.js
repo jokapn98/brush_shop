@@ -8,14 +8,13 @@ import Recomendation from "../components/recomendation/Recomendation";
 import Instagram from "../components/instagram/Instagram";
 import Quality from "../components/Quality";
 import Newsletter from "../components/Newsletter";
-import Test from "../components/Test";
+
 export const HomePage = () => {
   const brushes = useSelector((state) => state.brushes);
 
   return (
     <div>
       <Layout className="container bred">
-        <Test />
         <Home />
         <Logos />
         <Bestsellers brushes={brushes} />

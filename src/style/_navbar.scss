@@ -1,17 +1,42 @@
 .navbar {
-    height: 10vh;
-    width: 100%;
+  width: 100%;
+  background-color: #ffffff !important;
+  padding: 1rem 0;
+
+  &-collapse-nav {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    background-color: #ffffff !important;
 
-
-    &-collapse-nav {
-        display: flex;
-        justify-content: space-around !important;
-        align-items: center !important;
-
+    a {
+      margin: 0.5rem 1rem;
     }
+  }
 
+  &-searching {
+    margin-top: 0.5rem;
+    width: 100%;
+
+    @media (min-width: 992px) {
+      margin-top: 0;
+      width: auto;
+    }
+  }
+}
+.nav{
+    &-links {
+  display: flex;
+  gap: 1.5rem; // razmak između linkova
+  margin-left: 2rem; // udaljenost od loga
+}
+
+
+&-button{
+    font-size: 10px;
+    padding: 5px 10px!important;
+}
+&-input{
+    font-size: 12px;
+    padding: 5px 10px!important;
+}
 }

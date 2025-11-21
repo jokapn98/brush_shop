@@ -49,7 +49,7 @@ const ProductDetails = () => {
   };
 
   return (
-    <div className="col-12 container-main bb">
+    <div className="col-12 container-main">
       <div className="container prod col-12 row">
         {/* LEVA STRANA - slike */}
         <div className="col-md-6 col-12 prod-imageContainer row">

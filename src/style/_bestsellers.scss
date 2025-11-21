@@ -1,9 +1,36 @@
 .best {
     height: auto;
 
+&-border{
+    display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+
+&-viewMore{
+    margin-top: 40px!important;
+    position: relative!important;
+
+    display: flex;
+  flex-wrap: wrap;
+}
+
     &-main {
         display: flex;
+        min-height: 50vh;
         justify-content: space-around;
+
+  @media (max-width: 765px) {
+               min-height: 30vh;;
+            }
+        
+        & img{
+            height: 36vh;
+        @media (max-width: 765px) {
+                    height: 25vh;
+        } @media (max-width: 576px) {
+                    height: 15vh;
+        }}
 
     }
 
@@ -26,7 +53,6 @@
 
     &-products {
         width: 100%;
-
         display: flex;
         min-height: 50vh;
         display: flex;
@@ -123,4 +149,31 @@
     }
 
 
+
+}
+
+.prev-arrow,
+.next-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.7);
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* pozicije */
+.prev-arrow {
+  left: 10px;
+}
+
+.next-arrow {
+  right: 10px;
 }

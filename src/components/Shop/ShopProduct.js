@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 const ShopProduct = ({ id, name, brushImg, price, colors }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  // Sledeća slika
   const nextImage = (e) => {
     e.preventDefault();
     setCurrentImageIndex((prevIndex) =>
@@ -12,7 +11,6 @@ const ShopProduct = ({ id, name, brushImg, price, colors }) => {
     );
   };
 
-  // Prethodna slika
   const prevImage = (e) => {
     e.preventDefault();
     setCurrentImageIndex((prevIndex) =>
@@ -36,53 +34,18 @@ const ShopProduct = ({ id, name, brushImg, price, colors }) => {
             {/* Strelice — pojavljuju se samo ako ima više od jedne slike */}
             {brushImg.length > 1 && (
               <>
-                <button
-                  className="prev-arrow"
-                  onClick={prevImage}
-                  style={{
-                    position: "absolute",
-                    left: "10px",
-                    top: "50%",
-                    transform: "translateY(-50%)",
-                    background: "rgba(255, 255, 255, 0.7)",
-                    border: "none",
-                    borderRadius: "50%",
-                    width: "28px",
-                    height: "28px",
-                    fontSize: "16px",
-                    cursor: "pointer"
-                  }}
-                >
+                <button className="prev-arrow" onClick={prevImage}>
                   ‹
                 </button>
-                <button
-                  className="next-arrow"
-                  onClick={nextImage}
-                  style={{
-                    position: "absolute",
-                    right: "10px",
-                    top: "50%",
-                    transform: "translateY(-50%)",
-                    background: "rgba(255, 255, 255, 0.7)",
-                    border: "none",
-                    borderRadius: "50%",
-                    width: "28px",
-                    height: "28px",
-                    fontSize: "16px",
-                    cursor: "pointer"
-                  }}
-                >
+                <button className="next-arrow" onClick={nextImage}>
                   ›
                 </button>
               </>
             )}
           </div>
-
-          {/* Naziv i cena proizvoda */}
           <p className="volkhov-regular p2">{name}</p>
           <p>{price}</p>
-
-          {/* Boje proizvoda */}
+          {/* Boje */}
           <div className="colors">
             {colors.map((color) => (
               <button
