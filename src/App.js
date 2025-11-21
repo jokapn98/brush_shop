@@ -7,7 +7,7 @@ import ContactPage from "./pages/ContactPage";
 import ProductManipulationPage from "./pages/ProductManipulationPage";
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter className="hero">
       <Routes>
         <Route exact path="/" element={<HomePage />} />
         <Route path="/shop/page/:pageNum" element={<ShopPage />} />
